@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>华构清游｜中国古建筑展示网站</title>
+    <meta
+      name="description"
+      content="以清新且新颖的方式展示中国古建筑的空间格局、朝代演进、构造细节、地域巡游与保护现状。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="wangzhan-waike">
+      <header class="wangzhan-dinglan">
+        <a class="pinpai-biaoji" href="#top" aria-label="华构清游首页">
+          <span class="pinpai-biaoji__yinzhang">华</span>
+          <span>
+            <strong>华构清游</strong>
+            <small>China Ancient Architecture Atlas</small>
+          </span>
+        </a>
+        <nav class="wangzhan-daohang" aria-label="主导航">
+          <a href="#zhanting">展厅叙事</a>
+          <a href="#tujian">建筑图鉴</a>
+          <a href="#shijianzhou">千年演进</a>
+          <a href="#goujian">构件拆解</a>
+          <a href="#luxian">巡游路线</a>
+          <a href="#baohu">保护现场</a>
+          <a href="#canfang">参访指南</a>
+        </nav>
+        <a class="dinglan-anniu" href="./xiangxi/index.html">进入详情浏览</a>
+      </header>
+
+      <main id="top">
+        <section class="shouye">
+          <div class="shouye__beijing"></div>
+          <div class="shouye__wenan">
+            <p class="eyebrow">中国古建筑专题展示</p>
+            <h1>把飞檐、院落与斗拱，做成一场可以漫游的线上展览。</h1>
+            <p class="shouye__jianjie">
+              从宫殿、寺观、园林到土楼，用更轻盈的色彩、更当代的编排，完整呈现中国古建筑的空间审美、技术智慧与文化延续。
+            </p>
+            <div class="shouye__anniuqu">
+              <a class="button button--zhongdian" href="./xiangxi/index.html">进入详细浏览</a>
+              <a class="button button--shixin" href="#tujian">进入建筑图鉴</a>
+              <a class="button button--kongxin" href="#shijianzhou">浏览朝代脉络</a>
+            </div>
+            <dl class="shouye__shuju" aria-label="站点亮点">
+              <div>
+                <dt>34个</dt>
+                <dd>收录建筑省份</dd>
+              </div>
+              <div>
+                <dt>6</dt>
+                <dd>朝代演进节点</dd>
+              </div>
+              <div>
+                <dt>4</dt>
+                <dd>构件拆解模块</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="shouye__shijue">
+            <div class="yuepan"></div>
+            <div class="yunwu yunwu--yi"></div>
+            <div class="yunwu yunwu--er"></div>
+            <div class="tudie" id="tudie"></div>
+            <div class="jianzhu-wutai">
+              <div class="wutai wutai--hou">
+                <span class="wuding wuding--kuan"></span>
+                <span class="zhuzi zhuzi--yi"></span>
+                <span class="zhuzi zhuzi--er"></span>
+                <span class="pingtai"></span>
+              </div>
+              <div class="wutai wutai--qian lunbotu-waike" id="lunbotu" aria-label="古建筑精选轮播">
+                <div class="lunbotu__guidao" id="lunbotuGuidao"></div>
+                <div class="lunbotu__mengceng" id="lunbotuMengceng"></div>
+                <div class="lunbotu__kongzhi">
+                  <button class="lunbotu__jiantou" id="lunbotuQian" type="button" aria-label="上一张">‹</button>
+                  <div class="lunbotu__dianzu" id="lunbotuDianzu" aria-label="轮播切换"></div>
+                  <button class="lunbotu__jiantou" id="lunbotuHou" type="button" aria-label="下一张">›</button>
+                </div>
+              </div>
+              <div class="shuixian"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="daoyu section fenqu--lianglan jianxian" id="daoyu">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">看点导览</p>
+            <h2>不是罗列名胜，而是从建筑观看中国。</h2>
+          </div>
+          <div class="daoyu-wangge">
+            <article>
+              <span>空间秩序</span>
+              <h3>中轴、院落、台基与层层递进</h3>
+              <p>从都城宫殿到江南园林，空间并不只是实用布局，更是礼制、生活方式和自然观念的外化。</p>
+            </article>
+            <article>
+              <span>营造技艺</span>
+              <h3>木构系统里的榫卯与斗拱</h3>
+              <p>木构架让中国古建筑兼具尺度、弹性与细节美感，也形成了独特的维修与延续方式。</p>
+            </article>
+            <article>
+              <span>地域风貌</span>
+              <h3>从北方重檐到南方粉墙黛瓦</h3>
+              <p>不同地形、气候与材料，让同样的建筑观念在各地长出截然不同的表情与尺度。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="shijing-changlang section jianxian" id="photos">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">实景长廊</p>
+            <h2>用真实建筑照片，把网页里的古建气息拉回到现场。</h2>
+          </div>
+          <div class="shijing-changlang__wangge" id="shijingChanglang"></div>
+        </section>
+
+        <section class="zhanting section fenqu--gushi jianxian" id="zhanting">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">展厅叙事</p>
+            <h2>向下滚动，让古建筑的秩序、结构、风景与生活一幕一幕接管视线。</h2>
+          </div>
+          <div class="zhanting-waike">
+            <aside class="zhanting-wutai" id="gushiWutai" aria-live="polite"></aside>
+            <div class="zhanting-guiji" id="gushiGuiji"></div>
+          </div>
+        </section>
+
+        <section class="tujian section jianxian" id="tujian">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">建筑图鉴</p>
+            <h2>按地域与类型筛选，快速建立你的古建筑认知地图。</h2>
+          </div>
+          <div class="tujian-gongju">
+            <label class="sousuo-kuang">
+              <span class="wuzhang-yincang">搜索建筑</span>
+              <input id="sousuoInput" type="search" placeholder="搜索建筑名称、朝代或城市" />
+            </label>
+            <div class="shaixuan-zu" id="shaixuanZu" aria-label="图鉴筛选">
+              <button class="chip is-active" data-shaixuan="all">全部</button>
+              <button class="chip" data-shaixuan="宫殿">宫殿</button>
+              <button class="chip" data-shaixuan="寺观">寺观</button>
+              <button class="chip" data-shaixuan="园林">园林</button>
+              <button class="chip" data-shaixuan="塔楼">塔楼</button>
+              <button class="chip" data-shaixuan="民居">民居</button>
+            </div>
+          </div>
+          <div class="tujian-buju">
+            <div class="tujian-liebiao" id="jianzhuLiebiao" aria-live="polite"></div>
+            <aside class="tujian-tishi">
+              <p class="tujian-tishi__biaoqian">观看提示</p>
+              <h3>先看尺度，再看细节。</h3>
+              <p>
+                宫殿适合从中轴与序列入手，寺观适合看梁架与屋顶，园林适合看借景与曲折，民居则最能体现地域生活方式。
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="shijianzhou section jianxian" id="shijianzhou">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">千年演进</p>
+            <h2>从唐宋规范到明清成熟，古建筑在时代中不断被重写。</h2>
+          </div>
+          <div class="shijianzhou-waike">
+            <div class="shijianzhou-daohang" id="shijianzhouDaohang" role="tablist" aria-label="朝代切换"></div>
+            <article class="shijianzhou-mianban" id="shijianzhouMianban"></article>
+          </div>
+        </section>
+
+        <section class="goujian section fenqu--duibi jianxian" id="goujian">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">构件拆解</p>
+            <h2>把难懂的营造术语，变成一眼能理解的结构关系。</h2>
+          </div>
+          <div class="goujian-buju">
+            <div class="goujian-shijue" id="goujianShijue" aria-hidden="true"></div>
+            <div class="goujian-neirong">
+              <div class="goujian-qian" id="goujianQian" role="tablist" aria-label="构件切换"></div>
+              <article class="goujian-mianban" id="goujianMianban"></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="luxian section jianxian" id="luxian">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">巡游路线</p>
+            <h2>把观看转化为出发计划，给你四条各有气质的古建路线。</h2>
+          </div>
+          <div class="luxian-qian" id="luxianQian" role="tablist" aria-label="巡游路线切换"></div>
+          <article class="luxian-mianban" id="luxianMianban"></article>
+        </section>
+
+        <section class="baohu section jianxian" id="baohu">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">保护现场</p>
+            <h2>古建筑不是静止文物，它们仍在经历修缮、使用与再认识。</h2>
+          </div>
+          <div class="baohu-wangge">
+            <article>
+              <span>修缮原则</span>
+              <h3>最小干预，延续原工艺</h3>
+              <p>木构建筑的保护更像“持续维护”，重点不是一次翻新，而是保留构件、工艺与时间痕迹。</p>
+            </article>
+            <article>
+              <span>数字化记录</span>
+              <h3>测绘、建模与灾害监测同步推进</h3>
+              <p>三维扫描和高精度测绘正在帮助更多古建形成可追溯档案，提升抢险修复效率。</p>
+            </article>
+            <article>
+              <span>公众参与</span>
+              <h3>理解比打卡更重要</h3>
+              <p>规范参观、减少触碰、关注地方博物馆与研究机构公开项目，都是参与保护的一部分。</p>
+            </article>
+          </div>
+          <div class="baohu-jindu">
+            <div>
+              <strong>木构保养</strong>
+              <span><i style="width: 88%"></i></span>
+            </div>
+            <div>
+              <strong>数字建档</strong>
+              <span><i style="width: 72%"></i></span>
+            </div>
+            <div>
+              <strong>公众教育</strong>
+              <span><i style="width: 67%"></i></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="canfang section fenqu--shouwei jianxian" id="canfang">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">参访指南</p>
+            <h2>带着问题去看，古建筑会比照片里丰富得多。</h2>
+          </div>
+          <div class="canfang-wangge">
+            <article>
+              <h3>建议观看顺序</h3>
+              <p>先退远看整体屋顶与院落秩序，再靠近看斗拱、额枋、门窗与彩画，最后观察空间如何组织人的行动。</p>
+            </article>
+            <article>
+              <h3>推荐记录方式</h3>
+              <p>把“所在朝代、建筑类型、屋顶形式、最打动你的细节”记成四栏，几次参观后就能形成自己的古建知识框架。</p>
+            </article>
+            <article>
+              <h3>适合继续延伸</h3>
+              <p>可以继续关注《营造法式》、地方古建测绘成果、博物馆展览与遗产保护公开课程，建立更系统的认识。</p>
+            </article>
+          </div>
+          <div class="shouwei-tishi">
+            <p>华构清游</p>
+            <h3>在纸本、瓦檐和风景之间，重新发现中国建筑的时间感。</h3>
+            <a class="button button--shixin" href="#top">进入详细浏览</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="wangzhan-yejiao">
+        <p>华构清游 · 中国古建筑展示网站</p>
+        <p>由“肉编器编写组制作” 敢抄袭把你变成肉便器</p>
+        <p>以现代网页语言，重新组织传统建筑之美。</p>
+      </footer>
+    </div>
+
+    <dialog class="xiangqing-tanchuang" id="xiangqingTanchuang">
+      <form method="dialog" class="xiangqing-tanchuang__beijing">
+        <button class="tanchuang-guanbi" type="submit" aria-label="关闭详情">×</button>
+      </form>
+      <div class="xiangqing-tanchuang__neirong" id="xiangqingNeirong"></div>
+    </dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
