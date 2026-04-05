@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古建筑详细展示</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="wangye-waike">
+      <header class="dinglan">
+        <a class="pinpai" href="../index.html" aria-label="返回主页">
+          <span class="pinpai__yinzhang">华构</span>
+          <span class="pinpai__wenan">
+            <strong>古建筑详细展示</strong>
+            <small>Ancient Architecture Detail Exhibit</small>
+          </span>
+        </a>
+        <nav class="dinglan__daohang" aria-label="页面导航">
+          <a href="#lunbo">详细展示</a>
+          <a href="#lunbo">照片轮播</a>
+          <a href="#liulanFangshi">浏览方式</a>
+        </nav>
+        <a class="dinglan__anniu" href="../index.html">返回主页</a>
+      </header>
+
+      <main class="lunbo-zhuqu">
+        <section class="lunbo-qu" id="lunbo" aria-label="古建筑照片轮播">
+          <div class="lunbo-qu__guidao" id="lunboGuidao">
+        <figure class="lunbo-qu__huandeng is-active" data-index="0">
+          <img src="./image/img1.jpg" alt="佛光寺东大殿正立面" loading="eager">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="1">
+          <img src="./image/img2.jpg" alt="佛光寺东大殿斜侧面" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="2">
+          <img src="./image/img3.jpg" alt="佛光寺东大殿近景" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="3">
+          <img src="./image/img4.jpg" alt="佛光寺东大殿与环境" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="4">
+          <img src="./image/img5.jpg" alt="佛光寺东大殿檐下光影" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="5">
+          <img src="./image/img6.jpg" alt="佛光寺东大殿全景" loading="lazy">
+        </figure>
+      </div>
+          <div class="lunbo-qu__mengceng" id="lunboMengceng">
+            <div class="lunbo-qu__neirong is-active" id="lunboNeirong">
+              <p class="lunbo-qu__meibiao" id="lunboMeibiao">On-site Sequence</p>
+              <p class="lunbo-qu__fubiaoti" id="lunboFubiaoti">第一幕 · 正立面</p>
+              <h1 id="lunboBiaoti">先让轮廓建立秩序</h1>
+              <p class="lunbo-qu__wenan" id="lunboWenan">先从正立面进入，抓住屋顶、檐口和殿身比例，这是一切细节的起点。</p>
+              <p class="lunbo-qu__xiangjie" id="lunboXiangjie">这一张不是为了看装饰，而是为了确认整座建筑如何站立。远望时，屋顶压下来的重量感和殿身的稳定感会先一步成立，后面的细部观看才有坐标。</p>
+              <div class="lunbo-qu__biaoqian" id="lunboBiaoqian"><span>正立面</span><span>整体轮廓</span><span>尺度感</span></div>
+            </div>
+          </div>
+          <div class="lunbo-qu__kongzhi">
+            <button class="lunbo-qu__jiantou" id="lunboQian" type="button" aria-label="上一张">‹</button>
+            <div class="lunbo-qu__dianzu" id="lunboDianzu" aria-label="轮播切换">
+        <button class="lunbo-qu__dian is-active" type="button" data-index="0" aria-label="切换到第 1 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="1" aria-label="切换到第 2 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="2" aria-label="切换到第 3 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="3" aria-label="切换到第 4 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="4" aria-label="切换到第 5 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="5" aria-label="切换到第 6 张"></button>
+      </div>
+            <button class="lunbo-qu__jiantou" id="lunboHou" type="button" aria-label="下一张">›</button>
+          </div>
+          <div class="lunbo-qu__jishu" id="lunboJishu">01 / 06</div>
+        </section>
+
+        <section class="liulan-fangshi" id="liulanFangshi" aria-label="三种浏览方式">
+          <div class="liulan-fangshi__tou">
+            <div>
+              <p class="liulan-fangshi__meibiao">Browse Paths</p>
+              <h2>继续往下看，可以换三种方法重新进入古建筑。</h2>
+            </div>
+          </div>
+
+          <div class="liulan-fangshi__anniuqu">
+            <button class="liulan-anniu liulan-anniu--diqu" type="button">按地区展示</button>
+            <button class="liulan-anniu liulan-anniu--gouzao" type="button">按构造展示</button>
+            <button class="liulan-anniu liulan-anniu--tese" type="button">按特色展示</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  
+
+</body></html>

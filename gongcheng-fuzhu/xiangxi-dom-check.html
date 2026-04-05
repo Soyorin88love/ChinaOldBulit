@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古建筑详细展示</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="wangye-waike">
+      <header class="dinglan">
+        <a class="pinpai" href="../index.html" aria-label="返回主页">
+          <span class="pinpai__yinzhang">华构</span>
+          <span class="pinpai__wenan">
+            <strong>古建筑详细展示</strong>
+            <small>Ancient Architecture Detail Exhibit</small>
+          </span>
+        </a>
+        <nav class="dinglan__daohang" aria-label="页面导航">
+          <a href="#lunbo">详细展示</a>
+          <a href="#lunbo">照片轮播</a>
+          <a href="#liulanFangshi">浏览方式</a>
+        </nav>
+        <a class="dinglan__anniu" href="../index.html">返回主页</a>
+      </header>
+
+      <main class="lunbo-zhuqu">
+        <section class="lunbo-qu" id="lunbo" aria-label="古建筑照片轮播">
+          <div class="lunbo-qu__guidao" id="lunboGuidao">
+        <figure class="lunbo-qu__huandeng is-active" data-index="0">
+          <img src="./image/img1.jpg" alt="佛光寺东大殿正立面" loading="eager">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="1">
+          <img src="./image/img2.jpg" alt="佛光寺东大殿斜侧面" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="2">
+          <img src="./image/img3.jpg" alt="佛光寺东大殿近景" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="3">
+          <img src="./image/img4.jpg" alt="佛光寺东大殿与环境" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="4">
+          <img src="./image/img5.jpg" alt="佛光寺东大殿檐下光影" loading="lazy">
+        </figure>
+      
+        <figure class="lunbo-qu__huandeng " data-index="5">
+          <img src="./image/img6.jpg" alt="佛光寺东大殿全景" loading="lazy">
+        </figure>
+      </div>
+          <div class="lunbo-qu__mengceng" id="lunboMengceng">
+            <div class="lunbo-qu__neirong is-active" id="lunboNeirong">
+              <p class="lunbo-qu__meibiao" id="lunboMeibiao">On-site Sequence</p>
+              <p class="lunbo-qu__fubiaoti" id="lunboFubiaoti">第一幕 · 正立面</p>
+              <h1 id="lunboBiaoti">先让轮廓建立秩序</h1>
+              <p class="lunbo-qu__wenan" id="lunboWenan">先从正立面进入，抓住屋顶、檐口和殿身比例，这是一切细节的起点。</p>
+              <p class="lunbo-qu__xiangjie" id="lunboXiangjie">这一张不是为了看装饰，而是为了确认整座建筑如何站立。远望时，屋顶压下来的重量感和殿身的稳定感会先一步成立，后面的细部观看才有坐标。</p>
+              <div class="lunbo-qu__biaoqian" id="lunboBiaoqian"><span>正立面</span><span>整体轮廓</span><span>尺度感</span></div>
+            </div>
+          </div>
+          <div class="lunbo-qu__kongzhi">
+            <button class="lunbo-qu__jiantou" id="lunboQian" type="button" aria-label="上一张">‹</button>
+            <div class="lunbo-qu__dianzu" id="lunboDianzu" aria-label="轮播切换">
+        <button class="lunbo-qu__dian is-active" type="button" data-index="0" aria-label="切换到第 1 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="1" aria-label="切换到第 2 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="2" aria-label="切换到第 3 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="3" aria-label="切换到第 4 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="4" aria-label="切换到第 5 张"></button>
+      
+        <button class="lunbo-qu__dian " type="button" data-index="5" aria-label="切换到第 6 张"></button>
+      </div>
+            <button class="lunbo-qu__jiantou" id="lunboHou" type="button" aria-label="下一张">›</button>
+          </div>
+          <div class="lunbo-qu__jishu" id="lunboJishu">01 / 06</div>
+        </section>
+
+        <section class="liulan-fangshi" id="liulanFangshi" aria-label="三种浏览方式">
+          <div class="liulan-fangshi__tou">
+            <div>
+              <p class="liulan-fangshi__meibiao">Browse Paths</p>
+              <h2>继续往下看，可以换三种方法重新进入古建筑。</h2>
+            </div>
+          </div>
+
+          <div class="liulan-fangshi__anniuqu">
+            <button class="liulan-anniu liulan-anniu--diqu" id="anniuDiqu" type="button">按地区展示</button>
+            <button class="liulan-anniu liulan-anniu--gouzao" id="anniuGouzao" type="button">按构造展示</button>
+            <button class="liulan-anniu liulan-anniu--tese" id="anniuTese" type="button">按特色展示</button>
+          </div>
+
+          <section class="diqu-zhanshi is-hidden" id="diquZhanshi" aria-label="中国地图地区展示">
+            <div class="diqu-zhanshi__qiehuan" aria-label="地区展示视图切换">
+              <button class="diqu-zhanshi__qiehuan-anniu is-active" id="anniuDituShitu" type="button">地图视图</button>
+              <button class="diqu-zhanshi__qiehuan-anniu" id="anniuAnquyu" type="button">按区域分类</button>
+            </div>
+
+            <div class="diqu-zhanshi__mianban" id="dituShituMianban">
+              <div class="diqu-zhanshi__tuqu">
+                <div class="diqu-zhanshi__ditu" id="dituDianwei">
+                  <div class="diqu-zhanshi__ditu-neiceng">
+                    <img class="diqu-zhanshi__ditu-tupian" src="./image/china-map-base.jpg" alt="中国地图地区分布底图">
+                    <div class="diqu-zhanshi__dianceng" id="dituDianceng">
+        <button class="shengfen-dian is-active" type="button" data-shengfen="北京" aria-label="查看 北京 古建筑信息" style="left:68.7%; top:30.6%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-16px">北京</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="天津" aria-label="查看 天津 古建筑信息" style="left:70.9%; top:31.5%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:8px">天津</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="河北" aria-label="查看 河北 古建筑信息" style="left:66.5%; top:33.4%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-52px; --biaoqian-y:-12px">河北</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="山西" aria-label="查看 山西 古建筑信息" style="left:59.2%; top:35.2%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-40px; --biaoqian-y:-14px">山西</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="内蒙古" aria-label="查看 内蒙古 古建筑信息" style="left:56.2%; top:24.2%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-50px; --biaoqian-y:-18px">内蒙古</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="辽宁" aria-label="查看 辽宁 古建筑信息" style="left:78.9%; top:25.8%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">辽宁</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="吉林" aria-label="查看 吉林 古建筑信息" style="left:83.7%; top:21.8%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-12px">吉林</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="黑龙江" aria-label="查看 黑龙江 古建筑信息" style="left:86.6%; top:15.1%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-8px; --biaoqian-y:-16px">黑龙江</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="上海" aria-label="查看 上海 古建筑信息" style="left:77.2%; top:54.6%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">上海</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="江苏" aria-label="查看 江苏 古建筑信息" style="left:74.3%; top:50.3%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-42px; --biaoqian-y:-16px">江苏</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="浙江" aria-label="查看 浙江 古建筑信息" style="left:76.3%; top:57.9%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">浙江</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="安徽" aria-label="查看 安徽 古建筑信息" style="left:69.7%; top:52.1%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-36px; --biaoqian-y:8px">安徽</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="福建" aria-label="查看 福建 古建筑信息" style="left:72.4%; top:64.7%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">福建</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="江西" aria-label="查看 江西 古建筑信息" style="left:67.3%; top:58.9%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-30px; --biaoqian-y:-16px">江西</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="山东" aria-label="查看 山东 古建筑信息" style="left:74.4%; top:39.4%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">山东</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="河南" aria-label="查看 河南 古建筑信息" style="left:63.8%; top:43.2%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-34px; --biaoqian-y:-16px">河南</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="湖北" aria-label="查看 湖北 古建筑信息" style="left:60.2%; top:53.1%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-34px; --biaoqian-y:-16px">湖北</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="湖南" aria-label="查看 湖南 古建筑信息" style="left:57.2%; top:60.1%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-34px; --biaoqian-y:-16px">湖南</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="广东" aria-label="查看 广东 古建筑信息" style="left:61.2%; top:73.8%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">广东</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="广西" aria-label="查看 广西 古建筑信息" style="left:53.1%; top:70.9%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-38px; --biaoqian-y:-16px">广西</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="海南" aria-label="查看 海南 古建筑信息" style="left:58.5%; top:84.2%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">海南</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="重庆" aria-label="查看 重庆 古建筑信息" style="left:51.4%; top:56.4%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-26px; --biaoqian-y:10px">重庆</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="四川" aria-label="查看 四川 古建筑信息" style="left:43.2%; top:53.4%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-34px; --biaoqian-y:-16px">四川</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="贵州" aria-label="查看 贵州 古建筑信息" style="left:46.8%; top:63.1%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-26px; --biaoqian-y:10px">贵州</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="云南" aria-label="查看 云南 古建筑信息" style="left:35.2%; top:71.3%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-28px; --biaoqian-y:-16px">云南</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="西藏" aria-label="查看 西藏 古建筑信息" style="left:19.3%; top:57.1%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-26px; --biaoqian-y:-16px">西藏</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="陕西" aria-label="查看 陕西 古建筑信息" style="left:49.4%; top:43.5%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-34px; --biaoqian-y:-16px">陕西</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="甘肃" aria-label="查看 甘肃 古建筑信息" style="left:36.1%; top:36.5%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-32px; --biaoqian-y:-16px">甘肃</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="青海" aria-label="查看 青海 古建筑信息" style="left:28.4%; top:43.8%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-26px; --biaoqian-y:-16px">青海</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="宁夏" aria-label="查看 宁夏 古建筑信息" style="left:44.1%; top:37.6%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">宁夏</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="新疆" aria-label="查看 新疆 古建筑信息" style="left:16.4%; top:27.3%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-26px; --biaoqian-y:-16px">新疆</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="台湾" aria-label="查看 台湾 古建筑信息" style="left:82.8%; top:74.5%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:-14px">台湾</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="香港" aria-label="查看 香港 古建筑信息" style="left:63.6%; top:76.2%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:10px; --biaoqian-y:8px">香港</span>
+        </button>
+      
+        <button class="shengfen-dian " type="button" data-shengfen="澳门" aria-label="查看 澳门 古建筑信息" style="left:61.7%; top:77.1%">
+          <span class="shengfen-dian__biaoqian" style="--biaoqian-x:-28px; --biaoqian-y:8px">澳门</span>
+        </button>
+      </div>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="diqu-zhanshi__cebian">
+                <p class="diqu-zhanshi__meibiao">Region Focus</p>
+                <h3 id="shengfenMingcheng">北京</h3>
+                <p class="diqu-zhanshi__jianjie" id="shengfenJianjie">以都城礼制建筑为核心，适合从中轴、台基、重檐和整体秩序理解古建筑的空间气势。</p>
+                <div class="diqu-zhanshi__xinxi">
+                  <span id="shengfenLeixing">代表类型：宫殿 / 祭祀建筑</span>
+                  <span id="shengfenDaibiao">代表建筑：故宫太和殿、祈年殿</span>
+                </div>
+                <p class="diqu-zhanshi__tishi">点击地图上的红点，可以切换不同省级区域的古建筑看点。</p>
+                <a class="diqu-zhanshi__xiangqing" id="shengfenXiangqingLianjie" href="./area/beijing.html">进入北京详情</a>
+              </aside>
+            </div>
+
+            <section class="quyu-fenlei is-hidden" id="quyuFenleiMianban" aria-label="按区域分类展示">
+              <div class="quyu-fenlei__tou">
+                <p class="diqu-zhanshi__meibiao">Regional Groups</p>
+                <h3>把中国古建筑放回更大的地理板块里看。</h3>
+                <p>从华北礼制、江南园林，到西南山地聚落和西北丝路遗存，每个区域都适合用不同的阅读方式进入。</p>
+              </div>
+              <div class="quyu-fenlei__wangge" id="quyuFenleiWangge">
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">华北</p>
+          <h4>适合从礼制、都城和早期木构进入，秩序感最强。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：中轴、台基、斗拱、寺观群</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：故宫太和殿、佛光寺、承德避暑山庄</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/beijing.html">北京</a><a class="quyu-fenlei__shengfen" href="./area/tianjin.html">天津</a><a class="quyu-fenlei__shengfen" href="./area/hebei.html">河北</a><a class="quyu-fenlei__shengfen" href="./area/shanxi.html">山西</a><a class="quyu-fenlei__shengfen" href="./area/neimenggu.html">内蒙古</a>
+          </div>
+        </article>
+      
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">东北</p>
+          <h4>皇家遗存与寒地城市共存，适合看气候和尺度适应。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：宫殿格局、寒地围护、近代城市纹理</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：沈阳故宫、北山古庙群、文庙</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/liaoning.html">辽宁</a><a class="quyu-fenlei__shengfen" href="./area/jilin.html">吉林</a><a class="quyu-fenlei__shengfen" href="./area/heilongjiang.html">黑龙江</a>
+          </div>
+        </article>
+      
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">华东</p>
+          <h4>园林、书院、古村和城厢建筑最密集，路径感和细节感最丰富。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：园林借景、徽派民居、土楼围合、书院体系</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：拙政园、宏村、永定土楼、蓬莱阁</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/shanghai.html">上海</a><a class="quyu-fenlei__shengfen" href="./area/jiangsu.html">江苏</a><a class="quyu-fenlei__shengfen" href="./area/zhejiang.html">浙江</a><a class="quyu-fenlei__shengfen" href="./area/anhui.html">安徽</a><a class="quyu-fenlei__shengfen" href="./area/fujian.html">福建</a><a class="quyu-fenlei__shengfen" href="./area/jiangxi.html">江西</a><a class="quyu-fenlei__shengfen" href="./area/shandong.html">山东</a>
+          </div>
+        </article>
+      
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">华中</p>
+          <h4>中原与长江中游叠在一起，适合看古都、楼阁和宗教建筑的连续性。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：古都遗存、楼阁视线、山地寺观</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：少林寺、黄鹤楼、岳阳楼</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/henan.html">河南</a><a class="quyu-fenlei__shengfen" href="./area/hubei.html">湖北</a><a class="quyu-fenlei__shengfen" href="./area/hunan.html">湖南</a>
+          </div>
+        </article>
+      
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">华南</p>
+          <h4>湿热气候下的宗祠、骑楼和海岛民居，最适合读生活方式。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：宗祠体系、骑楼街区、风雨桥、通风遮阴</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：陈家祠、程阳风雨桥、骑楼老街</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/guangdong.html">广东</a><a class="quyu-fenlei__shengfen" href="./area/guangxi.html">广西</a><a class="quyu-fenlei__shengfen" href="./area/hainan.html">海南</a>
+          </div>
+        </article>
+      
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">西南</p>
+          <h4>山地、坡地和多民族聚落最鲜明，建筑和地形关系极紧。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：吊脚楼、山城高差、古城聚落、宗教建筑</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：湖广会馆、青城山建筑群、布达拉宫</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/chongqing.html">重庆</a><a class="quyu-fenlei__shengfen" href="./area/sichuan.html">四川</a><a class="quyu-fenlei__shengfen" href="./area/guizhou.html">贵州</a><a class="quyu-fenlei__shengfen" href="./area/yunnan.html">云南</a><a class="quyu-fenlei__shengfen" href="./area/xizang.html">西藏</a>
+          </div>
+        </article>
+      
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">西北</p>
+          <h4>丝路、石窟和边地城镇把建筑放进更大的交通与文化交换里。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：塔寺、石窟、绿洲城市、边塞遗存</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：大雁塔、麦积山石窟、塔尔寺、艾提尕尔清真寺</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/shaanxi.html">陕西</a><a class="quyu-fenlei__shengfen" href="./area/gansu.html">甘肃</a><a class="quyu-fenlei__shengfen" href="./area/qinghai.html">青海</a><a class="quyu-fenlei__shengfen" href="./area/ningxia.html">宁夏</a><a class="quyu-fenlei__shengfen" href="./area/xinjiang.html">新疆</a>
+          </div>
+        </article>
+      
+        <article class="quyu-fenlei__ka">
+          <p class="quyu-fenlei__meibiao">港澳台</p>
+          <h4>跨海文化、庙宇系统和高密城市语境，共同形成另一种建筑观看方式。</h4>
+          <p class="quyu-fenlei__zhongdian">观看重点：庙宇、街区叠层、山海聚落</p>
+          <p class="quyu-fenlei__jianzhu">推荐建筑：文武庙、郑家大屋、龙山寺</p>
+          <div class="quyu-fenlei__shengfenzu">
+            <a class="quyu-fenlei__shengfen" href="./area/xianggang.html">香港</a><a class="quyu-fenlei__shengfen" href="./area/aomen.html">澳门</a><a class="quyu-fenlei__shengfen" href="./area/taiwan.html">台湾</a>
+          </div>
+        </article>
+      </div>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  
+
+</body></html>

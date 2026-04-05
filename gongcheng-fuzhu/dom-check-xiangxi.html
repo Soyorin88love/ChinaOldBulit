@@ -1,0 +1,831 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古建筑详细介绍</title>
+    <style>
+      :root {
+        --mianse: #f6f2e8;
+        --dibanse: #eef5ef;
+        --wenzi: #243434;
+        --cise: #5f746f;
+        --qingse: #4f9c90;
+        --qingshen: #2f6e64;
+        --chengse: #c5814f;
+        --xianse: rgba(36, 52, 52, 0.12);
+        --yingzi: 0 28px 70px rgba(43, 59, 56, 0.12);
+        --rongqi: min(1200px, calc(100vw - 40px));
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--wenzi);
+        background:
+          radial-gradient(circle at top left, rgba(216, 239, 232, 0.9), transparent 28%),
+          radial-gradient(circle at 88% 16%, rgba(197, 129, 79, 0.12), transparent 18%),
+          linear-gradient(180deg, var(--mianse), #f2efe5);
+        font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      .dinglan {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 18px max(20px, calc((100vw - 1200px) / 2));
+        border-bottom: 1px solid rgba(36, 52, 52, 0.08);
+        background: rgba(246, 242, 232, 0.78);
+        backdrop-filter: blur(16px);
+      }
+
+      .pinpai {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .pinpai__yuan {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(79, 156, 144, 0.92), rgba(47, 110, 100, 0.95));
+        color: #f8f8f4;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+      }
+
+      .pinpai strong {
+        display: block;
+        font-family: "STSong", "Songti SC", serif;
+        font-size: 1rem;
+      }
+
+      .pinpai span {
+        display: block;
+        margin-top: 2px;
+        color: var(--cise);
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .dinglan__anniu {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border: 1px solid rgba(47, 140, 126, 0.18);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.52);
+        color: var(--wenzi);
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background-color 0.25s ease;
+      }
+
+      .dinglan__anniu:hover {
+        transform: translateY(-2px);
+        border-color: rgba(47, 140, 126, 0.32);
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      .xiangye {
+        width: var(--rongqi);
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      .shouye {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+        gap: 32px;
+        align-items: center;
+        min-height: calc(100svh - 120px);
+      }
+
+      .shouye__wenan {
+        padding: 28px 0;
+      }
+
+      .meibiao {
+        margin: 0;
+        color: var(--qingse);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 0.82rem;
+      }
+
+      .shouye h1,
+      .banmian h2,
+      .tukuai h3 {
+        font-family: "STSong", "Songti SC", serif;
+        font-weight: 700;
+      }
+
+      .shouye h1 {
+        margin: 18px 0 14px;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+
+      .shouye__gaishu {
+        max-width: 34em;
+        margin: 0;
+        color: var(--cise);
+        line-height: 1.9;
+      }
+
+      .shouye__xinxi {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .shouye__xinxi span,
+      .biaoqian span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.64);
+        color: var(--wenzi);
+        box-shadow: 0 12px 28px rgba(43, 59, 56, 0.08);
+      }
+
+      .qiehuan {
+        margin-top: 28px;
+      }
+
+      .qiehuan__tou {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 14px;
+      }
+
+      .qiehuan__tou p {
+        margin: 0;
+        color: var(--cise);
+        font-size: 0.95rem;
+      }
+
+      .qiehuan__zu {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .qiehuan__anniu {
+        display: grid;
+        gap: 6px;
+        padding: 14px 16px;
+        border: 1px solid rgba(36, 52, 52, 0.08);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.5);
+        color: var(--cise);
+        text-align: left;
+        cursor: pointer;
+        transition:
+          transform 0.28s ease,
+          background-color 0.28s ease,
+          border-color 0.28s ease,
+          color 0.28s ease;
+      }
+
+      .qiehuan__anniu strong {
+        color: var(--wenzi);
+        font-size: 1rem;
+      }
+
+      .qiehuan__anniu.is-active {
+        border-color: rgba(47, 140, 126, 0.2);
+        background: linear-gradient(135deg, rgba(216, 239, 232, 0.98), rgba(255, 248, 240, 0.9));
+        color: var(--wenzi);
+        transform: translateY(-2px);
+      }
+
+      .shouye__meiti {
+        position: relative;
+        min-height: 720px;
+      }
+
+      .shouye__kuang {
+        position: sticky;
+        top: 108px;
+        overflow: hidden;
+        min-height: 720px;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 38px;
+        background: #1a2624;
+        box-shadow: var(--yingzi);
+      }
+
+      .shouye__kuang img {
+        width: 100%;
+        height: 100%;
+        min-height: 720px;
+        object-fit: cover;
+        display: block;
+        transform: scale(1.08);
+      }
+
+      .shouye__kuang::after {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(16, 26, 26, 0.08), rgba(16, 26, 26, 0.64)),
+          radial-gradient(circle at top right, rgba(216, 239, 232, 0.18), transparent 20%);
+        content: "";
+      }
+
+      .shouye__fudong {
+        position: absolute;
+        right: 24px;
+        bottom: 28px;
+        z-index: 2;
+        width: min(320px, calc(100% - 48px));
+        padding: 20px 22px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 28px;
+        background: rgba(17, 28, 27, 0.5);
+        color: #f7f5ef;
+        backdrop-filter: blur(12px);
+      }
+
+      .shouye__fudong p {
+        margin: 0;
+        line-height: 1.85;
+        color: rgba(247, 245, 239, 0.88);
+      }
+
+      .shouye__fudong strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.94rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .banmian {
+        margin-top: 26px;
+        padding: 36px;
+        border: 1px solid var(--xianse);
+        border-radius: 34px;
+        background: rgba(255, 251, 245, 0.78);
+        box-shadow: var(--yingzi);
+      }
+
+      .banmian__tou {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .banmian h2 {
+        margin: 10px 0 0;
+        font-size: clamp(1.9rem, 4vw, 2.8rem);
+      }
+
+      .banmian__shuoming {
+        max-width: 34em;
+        margin: 0;
+        color: var(--cise);
+        line-height: 1.85;
+      }
+
+      .dang'an {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .dang'an__ka {
+        padding: 20px;
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(238, 245, 239, 0.82));
+      }
+
+      .dang'an__ka span {
+        display: block;
+        color: var(--cise);
+        font-size: 0.84rem;
+        letter-spacing: 0.08em;
+      }
+
+      .dang'an__ka strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 1.1rem;
+      }
+
+      .tukuai {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .tukuai__ka {
+        padding: 24px;
+        border-radius: 28px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(247, 244, 236, 0.92)),
+          radial-gradient(circle at top left, rgba(216, 239, 232, 0.3), transparent 28%);
+        box-shadow: 0 18px 40px rgba(43, 59, 56, 0.08);
+      }
+
+      .tukuai__ka h3 {
+        margin: 0 0 12px;
+        font-size: 1.42rem;
+      }
+
+      .tukuai__ka p,
+      .luxian li,
+      .baohu__shuoming p {
+        margin: 0;
+        color: var(--cise);
+        line-height: 1.9;
+      }
+
+      .banmian--shuanglan {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+        gap: 24px;
+      }
+
+      .luxian {
+        display: grid;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .luxian li {
+        position: relative;
+        padding: 18px 18px 18px 54px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.62);
+      }
+
+      .luxian li::before {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        display: grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--qingse), var(--qingshen));
+        color: #fff;
+        font-size: 0.8rem;
+        content: attr(data-xuhao);
+      }
+
+      .baohu__cebian {
+        padding: 24px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(24, 40, 39, 0.92), rgba(34, 52, 50, 0.94));
+        color: #f7f5ef;
+      }
+
+      .baohu__cebian h3 {
+        margin: 0 0 14px;
+        font-size: 1.42rem;
+      }
+
+      .baohu__cebian p {
+        margin: 0 0 14px;
+        line-height: 1.9;
+        color: rgba(247, 245, 239, 0.86);
+      }
+
+      .baohu__cebian p:last-child {
+        margin-bottom: 0;
+      }
+
+      .yejiao {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        width: var(--rongqi);
+        margin: 0 auto;
+        padding: 0 0 32px;
+        color: var(--cise);
+      }
+
+      @media (max-width: 1080px) {
+        .shouye,
+        .banmian--shuanglan,
+        .tukuai,
+        .dang'an {
+          grid-template-columns: 1fr;
+        }
+
+        .qiehuan__zu {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .shouye__meiti,
+        .shouye__kuang {
+          min-height: 560px;
+        }
+
+        .shouye__kuang img {
+          min-height: 560px;
+        }
+
+        .shouye__kuang {
+          position: relative;
+          top: 0;
+        }
+      }
+
+      @media (max-width: 720px) {
+        :root {
+          --rongqi: calc(100vw - 24px);
+        }
+
+        .dinglan {
+          flex-wrap: wrap;
+          gap: 12px;
+          padding-right: 12px;
+          padding-left: 12px;
+        }
+
+        .xiangye {
+          padding-top: 22px;
+        }
+
+        .banmian {
+          padding: 24px;
+          border-radius: 28px;
+        }
+
+        .qiehuan__zu {
+          grid-template-columns: 1fr;
+        }
+
+        .shouye__meiti,
+        .shouye__kuang,
+        .shouye__kuang img {
+          min-height: 440px;
+        }
+
+        .shouye__fudong {
+          right: 16px;
+          bottom: 16px;
+          left: 16px;
+          width: auto;
+        }
+
+        .yejiao {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="dinglan">
+      <div class="pinpai">
+        <span class="pinpai__yuan">华构</span>
+        <div>
+          <strong>古建筑详细介绍</strong>
+          <span>Detailed Ancient Architecture Page</span>
+        </div>
+      </div>
+      <a class="dinglan__anniu" href="../index.html">返回主页</a>
+    </header>
+
+    <main class="xiangye">
+      <section class="shouye">
+        <div class="shouye__wenan">
+          <p class="meibiao">Architecture Detail Exhibition</p>
+          <h1 id="zhumingcheng">佛光寺东大殿</h1>
+          <p class="shouye__gaishu" id="zhugaishu">中国现存最重要的唐代木构之一，适合用来理解早期木构建筑如何在极少装饰下呈现巨大的结构力量。</p>
+          <div class="shouye__xinxi" id="zhuxinxi">
+          <span>山西五台</span>
+          <span>唐</span>
+          <span>寺观</span>
+        </div>
+          <div class="qiehuan">
+            <div class="qiehuan__tou">
+              <p>点击切换不同建筑，当前页面会同步更新图像、档案与讲解重点。</p>
+            </div>
+            <div class="qiehuan__zu" id="qiehuanzu">
+              <button class="qiehuan__anniu is-active" type="button" data-id="foguang">
+                <strong>佛光寺东大殿</strong>
+                <span>寺观 · 唐</span>
+              </button>
+            
+              <button class="qiehuan__anniu " type="button" data-id="taihe">
+                <strong>北京故宫太和殿</strong>
+                <span>宫殿 · 明清</span>
+              </button>
+            
+              <button class="qiehuan__anniu " type="button" data-id="qinian">
+                <strong>祈年殿</strong>
+                <span>祭祀建筑 · 明清</span>
+              </button>
+            
+              <button class="qiehuan__anniu " type="button" data-id="zhuozheng">
+                <strong>拙政园</strong>
+                <span>园林 · 明</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shouye__meiti">
+          <figure class="shouye__kuang">
+            <img id="zhutu" src="../assets/images/foguang-temple-east-hall.jpg" alt="佛光寺东大殿">
+            <figcaption class="shouye__fudong">
+              <strong id="fudongbiaoti">观看切口</strong>
+              <p id="fudongwenan">先看屋顶深远出檐，再看柱网和梁架比例，最后回到斗拱与阴影的关系。</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="banmian">
+        <div class="banmian__tou">
+          <div>
+            <p class="meibiao">建筑档案</p>
+            <h2>先用最少的信息建立整体轮廓。</h2>
+          </div>
+          <p class="banmian__shuoming" id="danganshuoming">这类建筑最适合训练“从结构读气质”的能力，先看柱网，再看檐下阴影和整体比例。</p>
+        </div>
+        <div class="dang'an">
+          <article class="dang'an__ka">
+            <span>所在地区</span>
+            <strong id="danganchengshi">山西五台</strong>
+          </article>
+          <article class="dang'an__ka">
+            <span>时代与朝代</span>
+            <strong id="danganniandai">唐</strong>
+          </article>
+          <article class="dang'an__ka">
+            <span>建筑类型</span>
+            <strong id="danganleixing">寺观</strong>
+          </article>
+          <article class="dang'an__ka">
+            <span>核心关键词</span>
+            <strong id="danganbiaoqian">唐风木构 / 斗拱 / 深远出檐</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="banmian">
+        <div class="banmian__tou">
+          <div>
+            <p class="meibiao">重点解读</p>
+            <h2>用三个角度，把建筑读得更深。</h2>
+          </div>
+          <p class="banmian__shuoming" id="jiedushuoming">从 佛光寺东大殿 出发，你可以把这些阅读方法迁移到更多古建筑现场。</p>
+        </div>
+        <div class="tukuai">
+          <article class="tukuai__ka">
+            <h3>结构看点</h3>
+            <p id="jiegoukanfa">柱网清晰，梁架比例浑厚，屋顶出檐深远。靠近后真正吸引人的并不是表面装饰，而是重量如何被有秩序地传递。</p>
+          </article>
+          <article class="tukuai__ka">
+            <h3>空间感受</h3>
+            <p id="kongjianganjue">殿身尺度凝练，屋檐带出的阴影边界很强，站在檐下时会感到空间有明显的压缩与庇护感。</p>
+          </article>
+          <article class="tukuai__ka">
+            <h3>文化意义</h3>
+            <p id="wenhuayiwei">它保留了中国木构在成熟早期的关键样貌，也是理解唐风建筑不可绕开的样本。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="banmian banmian--shuanglan">
+        <div>
+          <div class="banmian__tou">
+            <div>
+              <p class="meibiao">观看路线</p>
+              <h2>跟着身体移动，建筑才会真正展开。</h2>
+            </div>
+          </div>
+          <ol class="luxian" id="manyouluxian"><li data-xuhao="1">先退远看整体轮廓，确认屋顶曲线与殿身比例。</li><li data-xuhao="2">移动到侧面，观察出檐深度和柱列节奏。</li><li data-xuhao="3">最后停在檐下，读斗拱、梁架和阴影关系。</li></ol>
+        </div>
+        <aside class="baohu__cebian">
+          <h3>保护与参访</h3>
+          <p id="baohushuoming">木构老化、山地气候和游客承载共同决定了它需要长期监测与预防性修缮。</p>
+          <p id="fangwenjianyi">建议在光线斜射时参观，更容易看清屋檐厚度与结构层次。</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="yejiao">
+      <p>该页面位于 `xiangxi/index.html`，可作为独立详情页继续扩展。</p>
+      <p>图片引用自本地 `../assets/images/` 资源。</p>
+    </footer>
+
+    <script>
+      const jianzhuMulu = [
+        {
+          id: "foguang",
+          mingcheng: "佛光寺东大殿",
+          gaishu: "中国现存最重要的唐代木构之一，适合用来理解早期木构建筑如何在极少装饰下呈现巨大的结构力量。",
+          chengshi: "山西五台",
+          niandai: "唐",
+          leixing: "寺观",
+          biaoqian: ["唐风木构", "斗拱", "深远出檐"],
+          danganshuoming: "这类建筑最适合训练“从结构读气质”的能力，先看柱网，再看檐下阴影和整体比例。",
+          jiegoukanfa: "柱网清晰，梁架比例浑厚，屋顶出檐深远。靠近后真正吸引人的并不是表面装饰，而是重量如何被有秩序地传递。",
+          kongjianganjue: "殿身尺度凝练，屋檐带出的阴影边界很强，站在檐下时会感到空间有明显的压缩与庇护感。",
+          wenhuayiwei: "它保留了中国木构在成熟早期的关键样貌，也是理解唐风建筑不可绕开的样本。",
+          manyou: [
+            "先退远看整体轮廓，确认屋顶曲线与殿身比例。",
+            "移动到侧面，观察出檐深度和柱列节奏。",
+            "最后停在檐下，读斗拱、梁架和阴影关系。"
+          ],
+          baohu: "木构老化、山地气候和游客承载共同决定了它需要长期监测与预防性修缮。",
+          fangwen: "建议在光线斜射时参观，更容易看清屋檐厚度与结构层次。",
+          tupian: "../assets/images/foguang-temple-east-hall.jpg",
+          zhutuAlt: "佛光寺东大殿",
+          fudongbiaoti: "观看切口",
+          fudongwenan: "先看屋顶深远出檐，再看柱网和梁架比例，最后回到斗拱与阴影的关系。"
+        },
+        {
+          id: "taihe",
+          mingcheng: "北京故宫太和殿",
+          gaishu: "中轴秩序、月台、重檐与色彩系统共同放大了皇家礼制，让建筑不仅是空间，更是权力的显影装置。",
+          chengshi: "北京",
+          niandai: "明清",
+          leixing: "宫殿",
+          biaoqian: ["中轴礼制", "高台基", "重檐庑殿顶"],
+          danganshuoming: "它不是单体建筑的孤立展示，而是整条抵达路径、院落和台基共同构成的秩序高潮。",
+          jiegoukanfa: "高台基抬升建筑威仪，重檐屋顶和大面阔同时建立横向展开感，立面节奏非常明确。",
+          kongjianganjue: "从前场靠近时，人的身体会被台基、门、院和檐层不断校正位置，庄严感来自序列而不是单点。",
+          wenhuayiwei: "太和殿代表了传统礼制建筑如何把等级、秩序与视觉记忆固定为国家象征。",
+          manyou: [
+            "先在广场前端远望，感受台基与屋顶的整体压场。",
+            "沿中轴逼近，观察门、院、月台的递进关系。",
+            "最后停在近处，细读栏杆、檐口和柱列比例。"
+          ],
+          baohu: "彩画、木构节点和超高游客承载都要求更精细的人流组织与结构监测。",
+          fangwen: "适合先远看整体秩序，再近看构件层级，不建议一开始就只盯细节装饰。",
+          tupian: "../assets/images/hall-of-supreme-harmony.jpg",
+          zhutuAlt: "北京故宫太和殿",
+          fudongbiaoti: "观看切口",
+          fudongwenan: "不要一开始只看细部，要先把它放回到中轴和广场的整体秩序里。"
+        },
+        {
+          id: "qinian",
+          mingcheng: "祈年殿",
+          gaishu: "圆形体量、蓝瓦、台基和祭祀空间共同建立了不同于宫殿建筑的几何秩序，象征意味极强。",
+          chengshi: "北京",
+          niandai: "明清",
+          leixing: "祭祀建筑",
+          biaoqian: ["圆形平面", "蓝瓦", "礼制象征"],
+          danganshuoming: "它最有价值的地方在于把几何、色彩和祭天礼仪合成一个极其鲜明的空间形象。",
+          jiegoukanfa: "圆形平面和层层上收的屋顶让它具有很强的向心感，柱列组织也比一般殿堂更强调几何秩序。",
+          kongjianganjue: "站在台基与殿身之间，会感到空间不再是轴向推进，而更接近环绕与集中。",
+          wenhuayiwei: "祈年殿展示了传统中国如何用建筑表达宇宙秩序与礼仪观念。",
+          manyou: [
+            "先站远处看整体轮廓，判断圆形体量与层叠屋顶关系。",
+            "沿台基边缘移动，感受几何秩序带来的稳定感。",
+            "最后近看色彩系统、柱列与台基比例。"
+          ],
+          baohu: "大木构节点、彩画与高频游客流线是持续保护中的核心难点。",
+          fangwen: "晴天时蓝瓦和白色台基的反差最强，更适合建立这座建筑的第一视觉印象。",
+          tupian: "../assets/images/hall-of-prayer-for-good-harvests.jpg",
+          zhutuAlt: "祈年殿",
+          fudongbiaoti: "观看切口",
+          fudongwenan: "重点读它的圆形几何，不要把它当成普通殿堂去看。"
+        },
+        {
+          id: "zhuozheng",
+          mingcheng: "拙政园",
+          gaishu: "园林建筑的重点从来不是单栋房子，而是厅、亭、桥、廊、水面和树石如何不断组织视线。",
+          chengshi: "江苏苏州",
+          niandai: "明",
+          leixing: "园林",
+          biaoqian: ["借景", "廊桥", "水院"],
+          danganshuoming: "阅读园林的关键不是站定，而是移动。景观、建筑和路径的关系远比立面本身更重要。",
+          jiegoukanfa: "单体尺度轻盈，屋顶、檐廊和门窗不断为景色设框，构造的重点在于服务观看而不是压迫空间。",
+          kongjianganjue: "你会感到空间像连续镜头一样切换，近景、中景和远景随着转身与步移不断重写。",
+          wenhuayiwei: "拙政园代表了江南园林把自然转化为可观看、可停驻、可漫游空间的高度成熟状态。",
+          manyou: [
+            "不要直线穿过，先沿廊慢走，找第一层框景。",
+            "停在桥、门洞和转角处，看景色如何被裁成画面。",
+            "最后回到水边，把建筑放回整体借景关系里。"
+          ],
+          baohu: "园林的保护不仅是建筑维护，还包括水系、植物、游线和使用强度之间的平衡。",
+          fangwen: "建议放慢速度，多次停留在转角和门洞处，这比匆忙打卡更能看懂它。",
+          tupian: "../assets/images/humble-administrators-garden.jpg",
+          zhutuAlt: "拙政园",
+          fudongbiaoti: "观看切口",
+          fudongwenan: "这不是看一栋建筑，而是在看一套不断变化的视线装置。"
+        }
+      ];
+
+      const zhumingcheng = document.querySelector("#zhumingcheng");
+      const zhugaishu = document.querySelector("#zhugaishu");
+      const zhuxinxi = document.querySelector("#zhuxinxi");
+      const qiehuanzu = document.querySelector("#qiehuanzu");
+      const zhutu = document.querySelector("#zhutu");
+      const fudongbiaoti = document.querySelector("#fudongbiaoti");
+      const fudongwenan = document.querySelector("#fudongwenan");
+      const danganshuoming = document.querySelector("#danganshuoming");
+      const danganchengshi = document.querySelector("#danganchengshi");
+      const danganniandai = document.querySelector("#danganniandai");
+      const danganleixing = document.querySelector("#danganleixing");
+      const danganbiaoqian = document.querySelector("#danganbiaoqian");
+      const jiedushuoming = document.querySelector("#jiedushuoming");
+      const jiegoukanfa = document.querySelector("#jiegoukanfa");
+      const kongjianganjue = document.querySelector("#kongjianganjue");
+      const wenhuayiwei = document.querySelector("#wenhuayiwei");
+      const manyouluxian = document.querySelector("#manyouluxian");
+      const baohushuoming = document.querySelector("#baohushuoming");
+      const fangwenjianyi = document.querySelector("#fangwenjianyi");
+
+      let dangqianId = "foguang";
+
+      function shengchengQiehuan() {
+        qiehuanzu.innerHTML = jianzhuMulu
+          .map(
+            (item) => `
+              <button class="qiehuan__anniu ${item.id === dangqianId ? "is-active" : ""}" type="button" data-id="${item.id}">
+                <strong>${item.mingcheng}</strong>
+                <span>${item.leixing} · ${item.niandai}</span>
+              </button>
+            `
+          )
+          .join("");
+      }
+
+      function shengchengXiangye(id) {
+        const item = jianzhuMulu.find((entry) => entry.id === id) || jianzhuMulu[0];
+        dangqianId = item.id;
+        zhumingcheng.textContent = item.mingcheng;
+        zhugaishu.textContent = item.gaishu;
+        zhuxinxi.innerHTML = `
+          <span>${item.chengshi}</span>
+          <span>${item.niandai}</span>
+          <span>${item.leixing}</span>
+        `;
+        zhutu.src = item.tupian;
+        zhutu.alt = item.zhutuAlt;
+        fudongbiaoti.textContent = item.fudongbiaoti;
+        fudongwenan.textContent = item.fudongwenan;
+        danganshuoming.textContent = item.danganshuoming;
+        danganchengshi.textContent = item.chengshi;
+        danganniandai.textContent = item.niandai;
+        danganleixing.textContent = item.leixing;
+        danganbiaoqian.textContent = item.biaoqian.join(" / ");
+        jiedushuoming.textContent = `从 ${item.mingcheng} 出发，你可以把这些阅读方法迁移到更多古建筑现场。`;
+        jiegoukanfa.textContent = item.jiegoukanfa;
+        kongjianganjue.textContent = item.kongjianganjue;
+        wenhuayiwei.textContent = item.wenhuayiwei;
+        manyouluxian.innerHTML = item.manyou
+          .map((buzhou, index) => `<li data-xuhao="${index + 1}">${buzhou}</li>`)
+          .join("");
+        baohushuoming.textContent = item.baohu;
+        fangwenjianyi.textContent = item.fangwen;
+        shengchengQiehuan();
+      }
+
+      qiehuanzu.addEventListener("click", (event) => {
+        const mubiao = event.target.closest("[data-id]");
+        if (!mubiao) return;
+        shengchengXiangye(mubiao.dataset.id);
+      });
+
+      shengchengXiangye(dangqianId);
+    </script>
+  
+
+</body></html>

@@ -1,0 +1,736 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华构清游｜中国古建筑展示网站</title>
+    <meta name="description" content="以清新且新颖的方式展示中国古建筑的空间格局、朝代演进、构造细节、地域巡游与保护现状。">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="wangzhan-waike">
+      <header class="wangzhan-dinglan">
+        <a class="pinpai-biaoji" href="#top" aria-label="华构清游首页">
+          <span class="pinpai-biaoji__yinzhang">华</span>
+          <span>
+            <strong>华构清游</strong>
+            <small>China Ancient Architecture Atlas</small>
+          </span>
+        </a>
+        <nav class="wangzhan-daohang" aria-label="主导航">
+          <a href="#zhanting">展厅叙事</a>
+          <a href="#tujian">建筑图鉴</a>
+          <a href="#shijianzhou">千年演进</a>
+          <a href="#goujian">构件拆解</a>
+          <a href="#luxian">巡游路线</a>
+          <a href="#baohu">保护现场</a>
+        </nav>
+        <a class="dinglan-anniu" href="#canfang">参访指南</a>
+      </header>
+
+      <main id="top">
+        <section class="shouye">
+          <div class="shouye__beijing"></div>
+          <div class="shouye__wenan">
+            <p class="eyebrow">中国古建筑专题展示</p>
+            <h1>把飞檐、院落与斗拱，做成一场可以漫游的线上展览。</h1>
+            <p class="shouye__jianjie">
+              从宫殿、寺观、园林到土楼，用更轻盈的色彩、更当代的编排，完整呈现中国古建筑的空间审美、技术智慧与文化延续。
+            </p>
+            <div class="shouye__anniuqu">
+              <a class="button button--shixin" href="#tujian">进入建筑图鉴</a>
+              <a class="button button--kongxin" href="#shijianzhou">浏览朝代脉络</a>
+            </div>
+            <dl class="shouye__shuju" aria-label="站点亮点">
+              <div>
+                <dt>12+</dt>
+                <dd>重点建筑条目</dd>
+              </div>
+              <div>
+                <dt>6</dt>
+                <dd>朝代演进节点</dd>
+              </div>
+              <div>
+                <dt>4</dt>
+                <dd>构件拆解模块</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="shouye__shijue">
+            <div class="yuepan"></div>
+            <div class="yunwu yunwu--yi"></div>
+            <div class="yunwu yunwu--er"></div>
+            <div class="tudie" id="tudie">
+        <figure class="tudie-ka" data-shicha="" data-sudu="0.08" style="width: 238px; height: 304px; left: 18px; top: 32px; --tilt: -7deg; animation-delay: 0s; --parallax-y: -65.46500244140626px;">
+          <img src="./assets/images/hall-of-supreme-harmony.jpg" alt="故宫太和殿" loading="eager">
+          <figcaption>
+            <strong>故宫太和殿</strong>
+            <span>礼制尺度</span>
+          </figcaption>
+        </figure>
+      
+        <figure class="tudie-ka" data-shicha="" data-sudu="0.11" style="width: 208px; height: 244px; left: 164px; top: 4px; --tilt: 6deg; animation-delay: 0.8s; --parallax-y: -83.634375px;">
+          <img src="./assets/images/foguang-temple-east-hall.jpg" alt="佛光寺东大殿" loading="eager">
+          <figcaption>
+            <strong>佛光寺东大殿</strong>
+            <span>唐风木构</span>
+          </figcaption>
+        </figure>
+      
+        <figure class="tudie-ka" data-shicha="" data-sudu="0.14" style="width: 194px; height: 218px; left: 260px; top: 136px; --tilt: -4deg; animation-delay: 1.6s; --parallax-y: -123.10375px;">
+          <img src="./assets/images/humble-administrators-garden.jpg" alt="拙政园" loading="eager">
+          <figcaption>
+            <strong>拙政园</strong>
+            <span>园林借景</span>
+          </figcaption>
+        </figure>
+      </div>
+            <div class="jianzhu-wutai">
+              <div class="wutai wutai--hou">
+                <span class="wuding wuding--kuan"></span>
+                <span class="zhuzi zhuzi--yi"></span>
+                <span class="zhuzi zhuzi--er"></span>
+                <span class="pingtai"></span>
+              </div>
+              <div class="wutai wutai--qian lunbotu-waike" id="lunbotu" aria-label="古建筑精选轮播">
+                <div class="lunbotu__guidao" id="lunbotuGuidao">
+        <figure class="lunbotu__huandeng" data-lunbotu-huandeng="0">
+          <img src="./assets/images/hall-of-supreme-harmony.jpg" alt="故宫太和殿" loading="eager">
+        </figure>
+      
+        <figure class="lunbotu__huandeng is-active" data-lunbotu-huandeng="1">
+          <img src="./assets/images/foguang-temple-east-hall.jpg" alt="佛光寺东大殿" loading="lazy">
+        </figure>
+      
+        <figure class="lunbotu__huandeng " data-lunbotu-huandeng="2">
+          <img src="./assets/images/humble-administrators-garden.jpg" alt="拙政园" loading="lazy">
+        </figure>
+      
+        <figure class="lunbotu__huandeng " data-lunbotu-huandeng="3">
+          <img src="./assets/images/fujian-tulou.jpg" alt="福建土楼" loading="lazy">
+        </figure>
+      </div>
+                <div class="lunbotu__mengceng" id="lunbotuMengceng">
+    <p class="lunbotu__xiaobiao">首屏轮播</p>
+    <h3 class="lunbotu__biaoti">佛光寺东大殿</h3>
+    <p class="lunbotu__wenan">不靠繁复装饰，仅凭比例、屋檐和结构就足够震撼。</p>
+    <button class="lunbotu__anniu button button--kongxin" type="button" data-lunbotu-xiangqing="foguang">
+      查看 佛光寺东大殿 详情
+    </button>
+  </div>
+                <div class="lunbotu__kongzhi">
+                  <button class="lunbotu__jiantou" id="lunbotuQian" type="button" aria-label="上一张">‹</button>
+                  <div class="lunbotu__dianzu" id="lunbotuDianzu" aria-label="轮播切换">
+        <button class="lunbotu__dian" type="button" data-lunbotu-dian="0" aria-label="切换到第 1 张"></button>
+      
+        <button class="lunbotu__dian is-active" type="button" data-lunbotu-dian="1" aria-label="切换到第 2 张"></button>
+      
+        <button class="lunbotu__dian " type="button" data-lunbotu-dian="2" aria-label="切换到第 3 张"></button>
+      
+        <button class="lunbotu__dian " type="button" data-lunbotu-dian="3" aria-label="切换到第 4 张"></button>
+      </div>
+                  <button class="lunbotu__jiantou" id="lunbotuHou" type="button" aria-label="下一张">›</button>
+                </div>
+              </div>
+              <div class="shuixian"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="daoyu section fenqu--lianglan jianxian" id="daoyu">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">看点导览</p>
+            <h2>不是罗列名胜，而是从建筑观看中国。</h2>
+          </div>
+          <div class="daoyu-wangge">
+            <article>
+              <span>空间秩序</span>
+              <h3>中轴、院落、台基与层层递进</h3>
+              <p>从都城宫殿到江南园林，空间并不只是实用布局，更是礼制、生活方式和自然观念的外化。</p>
+            </article>
+            <article>
+              <span>营造技艺</span>
+              <h3>木构系统里的榫卯与斗拱</h3>
+              <p>木构架让中国古建筑兼具尺度、弹性与细节美感，也形成了独特的维修与延续方式。</p>
+            </article>
+            <article>
+              <span>地域风貌</span>
+              <h3>从北方重檐到南方粉墙黛瓦</h3>
+              <p>不同地形、气候与材料，让同样的建筑观念在各地长出截然不同的表情与尺度。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="shijing-changlang section jianxian" id="photos">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">实景长廊</p>
+            <h2>用真实建筑照片，把网页里的古建气息拉回到现场。</h2>
+          </div>
+          <div class="shijing-changlang__wangge" id="shijingChanglang">
+        <article class="shijing-ka jianxian" data-shicha="" data-sudu="0.04" style="--parallax-y: -97.795625px;">
+          <img src="./assets/images/hall-of-supreme-harmony.jpg" alt="故宫太和殿" loading="lazy">
+          <div class="shijing-ka__wenan">
+            <strong>礼制尺度</strong>
+            <p>高台基、重檐与中轴，把皇家建筑的秩序感推到极致。</p>
+            
+    <a class="tupian-laiyuan" href="https://commons.wikimedia.org/wiki/File:Hall_of_Supreme_Harmony_(20241127120000).jpg" target="_blank" rel="noreferrer noopener">
+      摄影：Wpcpey · CC BY-SA 4.0
+    </a>
+  
+          </div>
+        </article>
+      
+        <article class="shijing-ka jianxian" data-shicha="" data-sudu="0.055" style="--parallax-y: -127.373984375px;">
+          <img src="./assets/images/foguang-temple-east-hall.jpg" alt="佛光寺东大殿" loading="lazy">
+          <div class="shijing-ka__wenan">
+            <strong>唐风木构</strong>
+            <p>不靠繁复装饰，仅凭比例、屋檐和结构就足够震撼。</p>
+            
+    <a class="tupian-laiyuan" href="https://commons.wikimedia.org/wiki/File:Foguang_Temple_4.JPG" target="_blank" rel="noreferrer noopener">
+      摄影：Angus Cepka · CC BY-SA 2.5
+    </a>
+  
+          </div>
+        </article>
+      
+        <article class="shijing-ka jianxian" data-shicha="" data-sudu="0.07" style="--parallax-y: -180.17234375px;">
+          <img src="./assets/images/humble-administrators-garden.jpg" alt="拙政园" loading="lazy">
+          <div class="shijing-ka__wenan">
+            <strong>园林借景</strong>
+            <p>建筑成为观看自然的框架，步移景异才是核心体验。</p>
+            
+    <a class="tupian-laiyuan" href="https://commons.wikimedia.org/wiki/File:20230329_Humble_Administrator%27s_Garden_14.jpg" target="_blank" rel="noreferrer noopener">
+      摄影：N509FZ · CC BY-SA 4.0
+    </a>
+  
+          </div>
+        </article>
+      
+        <article class="shijing-ka jianxian" data-shicha="" data-sudu="0.08499999999999999" style="--parallax-y: -240.71070312499998px;">
+          <img src="./assets/images/fujian-tulou.jpg" alt="福建土楼" loading="lazy">
+          <div class="shijing-ka__wenan">
+            <strong>聚落围合</strong>
+            <p>厚重外墙与内部木构并存，防御与日常生活被整合在一起。</p>
+            
+    <a class="tupian-laiyuan" href="https://commons.wikimedia.org/wiki/File:Fujian_Tulou.jpg" target="_blank" rel="noreferrer noopener">
+      摄影：CEphoto, Uwe Aranas · CC BY-SA 3.0
+    </a>
+  
+          </div>
+        </article>
+      </div>
+        </section>
+
+        <section class="zhanting section fenqu--gushi jianxian" id="zhanting">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">展厅叙事</p>
+            <h2>向下滚动，让古建筑的秩序、结构、风景与生活一幕一幕接管视线。</h2>
+          </div>
+          <div class="zhanting-waike">
+            <aside class="zhanting-wutai" id="gushiWutai" aria-live="polite">
+    
+          <figure class="gushi-wutai__ceng is-active" data-gushi-ceng="0">
+            <img src="./assets/images/hall-of-supreme-harmony.jpg" alt="故宫太和殿" loading="eager">
+          </figure>
+        
+          <figure class="gushi-wutai__ceng " data-gushi-ceng="1">
+            <img src="./assets/images/foguang-temple-east-hall.jpg" alt="佛光寺东大殿" loading="lazy">
+          </figure>
+        
+          <figure class="gushi-wutai__ceng " data-gushi-ceng="2">
+            <img src="./assets/images/humble-administrators-garden.jpg" alt="拙政园" loading="lazy">
+          </figure>
+        
+          <figure class="gushi-wutai__ceng " data-gushi-ceng="3">
+            <img src="./assets/images/fujian-tulou.jpg" alt="福建土楼" loading="lazy">
+          </figure>
+        
+      <div class="gushi-wutai__mengceng" id="storyOverlay">
+        <p class="gushi-wutai__xiaobiao">Act I</p>
+        <h3 class="gushi-wutai__biaoti">先看秩序，古建筑从来不是零散单体。</h3>
+        <p class="gushi-wutai__yinju">从远望开始，你看到的不是一栋房子，而是一整套被放大的秩序。</p>
+        <div class="gushi-wutai__biaoqian"><span>中轴</span><span>台基</span><span>重檐</span></div>
+        
+    <a class="tupian-laiyuan gushi-wutai__laiyuan" href="https://commons.wikimedia.org/wiki/File:Hall_of_Supreme_Harmony_(20241127120000).jpg" target="_blank" rel="noreferrer noopener">
+      摄影：Wpcpey · CC BY-SA 4.0
+    </a>
+  
+      </div>
+  </aside>
+            <div class="zhanting-guiji" id="gushiGuiji">
+        <article class="gushi-buzhou is-active" data-gushi-buzhou="0">
+          <span class="gushi-buzhou__xuhao">Act I</span>
+          <h3>先看秩序，古建筑从来不是零散单体。</h3>
+          <p class="gushi-buzhou__daoyu">宫殿建筑最先抓住人的不是细节，而是被精确组织过的抵达路径。中轴、门阙、月台和重檐，让身体在靠近时自然进入一种被礼制控制的节奏。</p>
+          <div class="gushi-buzhou__wangge">
+            <ul class="gushi-buzhou__yaodian">
+              <li>远看时先抓整体轮廓，判断屋顶比例和台基高度。</li><li>行进过程中留意门、院、殿之间的层层递进。</li><li>真正的庄严感往往来自序列，而不是装饰堆砌。</li>
+            </ul>
+            <aside class="gushi-buzhou__cebian">
+              <strong>代表场景</strong>
+              <p>故宫太和殿、祈年殿一类建筑最适合训练这种“先读秩序”的观看方式。</p>
+            </aside>
+          </div>
+        </article>
+      
+        <article class="gushi-buzhou " data-gushi-buzhou="1">
+          <span class="gushi-buzhou__xuhao">Act II</span>
+          <h3>再看结构，木构的力量藏在檐下阴影里。</h3>
+          <p class="gushi-buzhou__daoyu">当你靠近建筑，真正决定气质的是结构节奏。柱网、梁架、斗拱和深远出檐共同制造出稳定、弹性和阴影层次，中国木构的技术之美就在这里显现。</p>
+          <div class="gushi-buzhou__wangge">
+            <ul class="gushi-buzhou__yaodian">
+              <li>观察斗拱时，先看它如何承托檐口，而不是只记名称。</li><li>柱距和梁架比例决定了空间的呼吸感。</li><li>唐代木构尤其适合看“少装饰但极有力量”的状态。</li>
+            </ul>
+            <aside class="gushi-buzhou__cebian">
+              <strong>代表场景</strong>
+              <p>佛光寺东大殿这样的实例，最能把结构逻辑直接暴露给观看者。</p>
+            </aside>
+          </div>
+        </article>
+      
+        <article class="gushi-buzhou " data-gushi-buzhou="2">
+          <span class="gushi-buzhou__xuhao">Act III</span>
+          <h3>转入园林，建筑开始为风景服务。</h3>
+          <p class="gushi-buzhou__daoyu">到了江南园林，建筑不再用宏大压迫你，而是不断引导你转身、停顿、借景。亭、廊、窗洞和水面一起工作，让风景成为被组织过的连续体验。</p>
+          <div class="gushi-buzhou__wangge">
+            <ul class="gushi-buzhou__yaodian">
+              <li>不要停在原地拍照，真正的看点在移动后的变化。</li><li>门洞、漏窗和廊柱会不断把景色重新切成画面。</li><li>园林的节奏是轻的，但空间控制一点也不松。</li>
+            </ul>
+            <aside class="gushi-buzhou__cebian">
+              <strong>代表场景</strong>
+              <p>拙政园、网师园适合从“连续镜头”的角度去理解建筑与自然的关系。</p>
+            </aside>
+          </div>
+        </article>
+      
+        <article class="gushi-buzhou " data-gushi-buzhou="3">
+          <span class="gushi-buzhou__xuhao">Act IV</span>
+          <h3>最后回到生活，古建筑也曾是被真实使用的日常空间。</h3>
+          <p class="gushi-buzhou__daoyu">民居和聚落把防御、协作、礼序和居住都塞进同一套建筑系统里。土楼、徽派村落这类类型最能说明，古建筑不是舞台布景，而是完整生活方式的外壳。</p>
+          <div class="gushi-buzhou__wangge">
+            <ul class="gushi-buzhou__yaodian">
+              <li>先看整体围合，再进入内部理解廊道和天井的组织。</li><li>注意建筑如何应对气候、防御和人际关系。</li><li>村落尺度上的水系与巷道，和单体民居同样重要。</li>
+            </ul>
+            <aside class="gushi-buzhou__cebian">
+              <strong>代表场景</strong>
+              <p>福建土楼与宏村这样的聚落，让“建筑即生活系统”变得非常直观。</p>
+            </aside>
+          </div>
+        </article>
+      </div>
+          </div>
+        </section>
+
+        <section class="tujian section jianxian" id="tujian">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">建筑图鉴</p>
+            <h2>按地域与类型筛选，快速建立你的古建筑认知地图。</h2>
+          </div>
+          <div class="tujian-gongju">
+            <label class="sousuo-kuang">
+              <span class="wuzhang-yincang">搜索建筑</span>
+              <input id="sousuoInput" type="search" placeholder="搜索建筑名称、朝代或城市">
+            </label>
+            <div class="shaixuan-zu" id="shaixuanZu" aria-label="图鉴筛选">
+              <button class="chip is-active" data-shaixuan="all">全部</button>
+              <button class="chip" data-shaixuan="宫殿">宫殿</button>
+              <button class="chip" data-shaixuan="寺观">寺观</button>
+              <button class="chip" data-shaixuan="园林">园林</button>
+              <button class="chip" data-shaixuan="塔楼">塔楼</button>
+              <button class="chip" data-shaixuan="民居">民居</button>
+            </div>
+          </div>
+          <div class="tujian-buju">
+            <div class="tujian-liebiao" id="jianzhuLiebiao" aria-live="polite">
+        <button class="tujian-ka" type="button" data-jianzhu-id="forbidden-city">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/hall-of-supreme-harmony.jpg" alt="北京故宫太和殿" loading="lazy">
+            <span class="tujian-ka__leixing">宫殿</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">北京故宫太和殿</strong>
+            <span class="tujian-ka__xinxi">北京 · 明清 · 看大屋顶与台基的组合，理解礼制如何通过建筑被放大。</span>
+            <span class="tujian-ka__biaoqian"><span>重檐庑殿顶</span><span>中轴</span><span>皇家建筑</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="foguang">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/foguang-temple-east-hall.jpg" alt="佛光寺东大殿" loading="lazy">
+            <span class="tujian-ka__leixing">寺观</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">佛光寺东大殿</strong>
+            <span class="tujian-ka__xinxi">山西五台 · 唐 · 看柱网与屋檐，不需要装饰也能感受到强大结构美。</span>
+            <span class="tujian-ka__biaoqian"><span>唐代木构</span><span>斗拱</span><span>深远出檐</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="nanchan">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/foguang-temple-east-hall.jpg" alt="南禅寺大殿" loading="lazy">
+            <span class="tujian-ka__leixing">寺观</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">南禅寺大殿</strong>
+            <span class="tujian-ka__xinxi">山西五台 · 唐 · 它没有夸张体量，但能清楚显示柱、梁、檐之间的真实关系。</span>
+            <span class="tujian-ka__biaoqian"><span>简洁</span><span>早期木构</span><span>山西</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="yingxian">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/foguang-temple-east-hall.jpg" alt="应县木塔" loading="lazy">
+            <span class="tujian-ka__leixing">塔楼</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">应县木塔</strong>
+            <span class="tujian-ka__xinxi">山西朔州 · 辽 · 重点不是“高”，而是多层木构如何层层卸力并保持挺拔。</span>
+            <span class="tujian-ka__biaoqian"><span>木塔</span><span>辽代</span><span>高层木构</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="xuankong">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/hanging-temple.jpg" alt="悬空寺" loading="lazy">
+            <span class="tujian-ka__leixing">寺观</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">悬空寺</strong>
+            <span class="tujian-ka__xinxi">山西大同 · 北魏至明清 · 看“地形如何决定建筑”，它几乎是山体剖面的一部分。</span>
+            <span class="tujian-ka__biaoqian"><span>依崖建筑</span><span>栈道</span><span>复合宗教</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="zhuozheng">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/humble-administrators-garden.jpg" alt="拙政园" loading="lazy">
+            <span class="tujian-ka__leixing">园林</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">拙政园</strong>
+            <span class="tujian-ka__xinxi">江苏苏州 · 明 · 在这里要看“走动后景色如何变化”，而不是只看单体建筑。</span>
+            <span class="tujian-ka__biaoqian"><span>园林</span><span>借景</span><span>水院</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="wangshi">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/master-of-the-nets-garden.jpg" alt="网师园" loading="lazy">
+            <span class="tujian-ka__leixing">园林</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">网师园</strong>
+            <span class="tujian-ka__xinxi">江苏苏州 · 清 · 建筑、墙体与水面一起制造“近中见远”的错觉。</span>
+            <span class="tujian-ka__biaoqian"><span>小园林</span><span>紧凑布局</span><span>曲折空间</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="tulou">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/fujian-tulou.jpg" alt="永定土楼" loading="lazy">
+            <span class="tujian-ka__leixing">民居</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">永定土楼</strong>
+            <span class="tujian-ka__xinxi">福建龙岩 · 明清 · 看圆与方的围合关系，就能理解土楼为何既像堡垒又像家。</span>
+            <span class="tujian-ka__biaoqian"><span>夯土</span><span>围合式</span><span>聚族而居</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="hongcun">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/hongcun-moon-pond.jpg" alt="宏村月沼民居群" loading="lazy">
+            <span class="tujian-ka__leixing">民居</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">宏村月沼民居群</strong>
+            <span class="tujian-ka__xinxi">安徽黄山 · 明清 · 不要只拍白墙黑瓦，更要看村落如何依水组织日常空间。</span>
+            <span class="tujian-ka__biaoqian"><span>徽派</span><span>马头墙</span><span>村落水系</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="penglai">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/yueyang-tower.jpg" alt="蓬莱阁" loading="lazy">
+            <span class="tujian-ka__leixing">塔楼</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">蓬莱阁</strong>
+            <span class="tujian-ka__xinxi">山东烟台 · 宋至清 · 它展示了建筑如何把自然奇景转化为观看舞台。</span>
+            <span class="tujian-ka__biaoqian"><span>临海</span><span>阁楼</span><span>山海关系</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="yueyang">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/yueyang-tower.jpg" alt="岳阳楼" loading="lazy">
+            <span class="tujian-ka__leixing">塔楼</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">岳阳楼</strong>
+            <span class="tujian-ka__xinxi">湖南岳阳 · 宋至清 · 注意楼阁层层出挑的屋檐如何强化远眺体验。</span>
+            <span class="tujian-ka__biaoqian"><span>楼阁</span><span>临湖</span><span>文人传统</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      
+        <button class="tujian-ka" type="button" data-jianzhu-id="tiantan">
+          <span class="tujian-ka__meiti">
+            <img src="./assets/images/hall-of-prayer-for-good-harvests.jpg" alt="祈年殿" loading="lazy">
+            <span class="tujian-ka__leixing">宫殿</span>
+          </span>
+          <span class="tujian-ka__zhuti">
+            <strong class="tujian-ka__mingcheng">祈年殿</strong>
+            <span class="tujian-ka__xinxi">北京 · 明清 · 观察圆形体量、台基和色彩系统如何构成独特气质。</span>
+            <span class="tujian-ka__biaoqian"><span>祭祀建筑</span><span>圆形平面</span><span>蓝瓦</span></span>
+          </span>
+          <span class="tujian-ka__jiantou">↗</span>
+        </button>
+      </div>
+            <aside class="tujian-tishi">
+              <p class="tujian-tishi__biaoqian">观看提示</p>
+              <h3>先看尺度，再看细节。</h3>
+              <p>
+                宫殿适合从中轴与序列入手，寺观适合看梁架与屋顶，园林适合看借景与曲折，民居则最能体现地域生活方式。
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="shijianzhou section jianxian" id="shijianzhou">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">千年演进</p>
+            <h2>从唐宋规范到明清成熟，古建筑在时代中不断被重写。</h2>
+          </div>
+          <div class="shijianzhou-waike">
+            <div class="shijianzhou-daohang" id="shijianzhouDaohang" role="tablist" aria-label="朝代切换">
+        <button type="button" class="is-active" data-index="0">
+          唐
+        </button>
+      
+        <button type="button" class="" data-index="1">
+          宋
+        </button>
+      
+        <button type="button" class="" data-index="2">
+          辽金
+        </button>
+      
+        <button type="button" class="" data-index="3">
+          元
+        </button>
+      
+        <button type="button" class="" data-index="4">
+          明
+        </button>
+      
+        <button type="button" class="" data-index="5">
+          清
+        </button>
+      </div>
+            <article class="shijianzhou-mianban mianban-qiehuan" id="shijianzhouMianban">
+    <p class="eyebrow">唐</p>
+    <h3>唐代｜浑厚有力，木构气象初显</h3>
+    <div class="shijianzhou-mianban__wangge">
+      <div>
+        <p>唐代留存不多，但现存实例已能看到成熟木构的力量感。柱网清晰、出檐深远、装饰克制，建筑以整体比例取胜。</p>
+        <p>唐风重在整体气象，对后世殿堂建筑比例和构架思路影响深远。</p>
+      </div>
+      <div class="shijianzhou-mianban__yaodian">
+        
+              <div>
+                <strong>01</strong>
+                <span>代表样本：佛光寺东大殿、南禅寺大殿</span>
+              </div>
+            
+              <div>
+                <strong>02</strong>
+                <span>关键词：大尺度屋顶、深檐、结构诚实</span>
+              </div>
+            
+              <div>
+                <strong>03</strong>
+                <span>观看重点：先看体量，再看梁架和斗拱的节奏</span>
+              </div>
+            
+      </div>
+    </div>
+  </article>
+          </div>
+        </section>
+
+        <section class="goujian section fenqu--duibi jianxian" id="goujian">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">构件拆解</p>
+            <h2>把难懂的营造术语，变成一眼能理解的结构关系。</h2>
+          </div>
+          <div class="goujian-buju">
+            <div class="goujian-shijue" id="goujianShijue" aria-hidden="true">
+    <div class="goujian-tu" data-kind="斗拱">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+            <div class="goujian-neirong">
+              <div class="goujian-qian" id="goujianQian" role="tablist" aria-label="构件切换">
+        <button type="button" class="is-active" data-index="0">
+          斗拱
+        </button>
+      
+        <button type="button" class="" data-index="1">
+          屋顶
+        </button>
+      
+        <button type="button" class="" data-index="2">
+          台基
+        </button>
+      
+        <button type="button" class="" data-index="3">
+          院落
+        </button>
+      </div>
+              <article class="goujian-mianban mianban-qiehuan" id="goujianMianban">
+    <p class="eyebrow">构件模块</p>
+    <h3>斗拱｜屋檐下最聪明的缓冲结构</h3>
+    <p>斗拱位于柱头与屋檐之间，既承担传力，也把屋顶重量层层分解。它让出檐更深、层次更丰富，同时形成中国古建筑最具辨识度的檐下景观。</p>
+    <ul class="goujian-mianban__liebiao">
+      <li>看点一：层层挑出，形成檐口阴影和节奏感</li><li>看点二：不只是装饰，而是关键受力节点</li><li>看点三：不同等级建筑的斗拱尺度和复杂度不同</li>
+    </ul>
+  </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="luxian section jianxian" id="luxian">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">巡游路线</p>
+            <h2>把观看转化为出发计划，给你四条各有气质的古建路线。</h2>
+          </div>
+          <div class="luxian-qian" id="luxianQian" role="tablist" aria-label="巡游路线切换">
+        <button type="button" class="is-active" data-index="0">
+          中轴盛典线
+        </button>
+      
+        <button type="button" class="" data-index="1">
+          晋北木构线
+        </button>
+      
+        <button type="button" class="" data-index="2">
+          江南园居线
+        </button>
+      
+        <button type="button" class="" data-index="3">
+          山海聚落线
+        </button>
+      </div>
+          <article class="luxian-mianban mianban-qiehuan" id="luxianMianban">
+    <div class="luxian-mianban__wangge">
+      <div>
+        <p class="eyebrow">北京 · 1-2 天</p>
+        <h3>北京中轴与礼制建筑路线</h3>
+        <p>适合第一次系统接触皇家建筑的人。重点不是跑景点，而是把中轴、台基、屋顶等级和祭祀空间串起来看。</p>
+        <ul class="luxian-mianban__liebiao">
+          <li>上午：故宫外朝轴线，重点看太和殿台基与重檐屋顶</li><li>下午：天坛祈年殿，比较祭祀建筑与宫殿建筑的空间差异</li><li>补充：景山高点俯瞰整体格局，更容易理解都城秩序</li>
+        </ul>
+      </div>
+      <aside class="luxian-mianban__cebian">
+        <strong>适合人群</strong>
+        <p>偏好宏大秩序、礼制文化和宫殿建筑的人。</p>
+        <strong>建议季节</strong>
+        <p>秋季和初冬更适合观察屋顶色彩与空间层次。</p>
+      </aside>
+    </div>
+  </article>
+        </section>
+
+        <section class="baohu section jianxian" id="baohu">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">保护现场</p>
+            <h2>古建筑不是静止文物，它们仍在经历修缮、使用与再认识。</h2>
+          </div>
+          <div class="baohu-wangge">
+            <article>
+              <span>修缮原则</span>
+              <h3>最小干预，延续原工艺</h3>
+              <p>木构建筑的保护更像“持续维护”，重点不是一次翻新，而是保留构件、工艺与时间痕迹。</p>
+            </article>
+            <article>
+              <span>数字化记录</span>
+              <h3>测绘、建模与灾害监测同步推进</h3>
+              <p>三维扫描和高精度测绘正在帮助更多古建形成可追溯档案，提升抢险修复效率。</p>
+            </article>
+            <article>
+              <span>公众参与</span>
+              <h3>理解比打卡更重要</h3>
+              <p>规范参观、减少触碰、关注地方博物馆与研究机构公开项目，都是参与保护的一部分。</p>
+            </article>
+          </div>
+          <div class="baohu-jindu">
+            <div>
+              <strong>木构保养</strong>
+              <span><i style="width: 88%"></i></span>
+            </div>
+            <div>
+              <strong>数字建档</strong>
+              <span><i style="width: 72%"></i></span>
+            </div>
+            <div>
+              <strong>公众教育</strong>
+              <span><i style="width: 67%"></i></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="canfang section fenqu--shouwei jianxian" id="canfang">
+          <div class="fenqu-biaoti">
+            <p class="eyebrow">参访指南</p>
+            <h2>带着问题去看，古建筑会比照片里丰富得多。</h2>
+          </div>
+          <div class="canfang-wangge">
+            <article>
+              <h3>建议观看顺序</h3>
+              <p>先退远看整体屋顶与院落秩序，再靠近看斗拱、额枋、门窗与彩画，最后观察空间如何组织人的行动。</p>
+            </article>
+            <article>
+              <h3>推荐记录方式</h3>
+              <p>把“所在朝代、建筑类型、屋顶形式、最打动你的细节”记成四栏，几次参观后就能形成自己的古建知识框架。</p>
+            </article>
+            <article>
+              <h3>适合继续延伸</h3>
+              <p>可以继续关注《营造法式》、地方古建测绘成果、博物馆展览与遗产保护公开课程，建立更系统的认识。</p>
+            </article>
+          </div>
+          <div class="shouwei-tishi">
+            <p>华构清游</p>
+            <h3>在纸本、瓦檐和风景之间，重新发现中国建筑的时间感。</h3>
+            <a class="button button--shixin" href="#top">回到顶部继续浏览</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="wangzhan-yejiao">
+        <p>华构清游 · 中国古建筑展示网站</p>
+        <p>以现代网页语言，重新组织传统建筑之美。</p>
+      </footer>
+    </div>
+
+    <dialog class="xiangqing-tanchuang" id="xiangqingTanchuang">
+      <form method="dialog" class="xiangqing-tanchuang__beijing">
+        <button class="tanchuang-guanbi" aria-label="关闭详情">×</button>
+      </form>
+      <div class="xiangqing-tanchuang__neirong" id="xiangqingNeirong"></div>
+    </dialog>
+
+    <script src="./script.js"></script>
+  
+
+</body></html>

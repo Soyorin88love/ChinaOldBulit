@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>古建筑详细展示</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="wangye-waike">
+      <header class="dinglan">
+        <a class="pinpai" href="../index.html" aria-label="返回主页">
+          <span class="pinpai__yinzhang">华构</span>
+          <span class="pinpai__wenan">
+            <strong>古建筑详细展示</strong>
+            <small>Ancient Architecture Detail Exhibit</small>
+          </span>
+        </a>
+        <nav class="dinglan__daohang" aria-label="页面导航">
+          <a href="#lunbo">详细展示</a>
+          <a href="#lunbo">照片轮播</a>
+          <a href="#liulanFangshi">浏览方式</a>
+        </nav>
+        <a class="dinglan__anniu" href="../index.html">返回主页</a>
+      </header>
+
+      <main class="lunbo-zhuqu">
+        <section class="lunbo-qu" id="lunbo" aria-label="古建筑照片轮播">
+          <div class="lunbo-qu__guidao" id="lunboGuidao"></div>
+          <div class="lunbo-qu__mengceng" id="lunboMengceng">
+            <div class="lunbo-qu__neirong is-active" id="lunboNeirong">
+              <p class="lunbo-qu__meibiao" id="lunboMeibiao">On-site Sequence</p>
+              <p class="lunbo-qu__fubiaoti" id="lunboFubiaoti">第一幕 · 正立面</p>
+              <h1 id="lunboBiaoti">先让轮廓建立秩序</h1>
+              <p class="lunbo-qu__wenan" id="lunboWenan">六张照片，六个观看切口。让详细展示先从图像接管视线开始。</p>
+              <p class="lunbo-qu__xiangjie" id="lunboXiangjie">先抓整体，再回到构件，最后让视线和现场关系重新接上。</p>
+              <div class="lunbo-qu__biaoqian" id="lunboBiaoqian"></div>
+            </div>
+          </div>
+          <div class="lunbo-qu__kongzhi">
+            <button class="lunbo-qu__jiantou" id="lunboQian" type="button" aria-label="上一张">‹</button>
+            <div class="lunbo-qu__dianzu" id="lunboDianzu" aria-label="轮播切换"></div>
+            <button class="lunbo-qu__jiantou" id="lunboHou" type="button" aria-label="下一张">›</button>
+          </div>
+          <div class="lunbo-qu__jishu" id="lunboJishu">01 / 06</div>
+        </section>
+
+        <section class="liulan-fangshi" id="liulanFangshi" aria-label="三种浏览方式">
+          <div class="liulan-fangshi__tou">
+            <div>
+              <p class="liulan-fangshi__meibiao">Browse Paths</p>
+              <h2>继续往下看，可以换三种方法重新进入古建筑。</h2>
+            </div>
+          </div>
+
+          <div class="liulan-fangshi__anniuqu">
+            <button class="liulan-anniu liulan-anniu--diqu" id="anniuDiqu" type="button">按地区展示</button>
+            <button class="liulan-anniu liulan-anniu--gouzao" id="anniuGouzao" type="button">按构造展示</button>
+            <button class="liulan-anniu liulan-anniu--tese" id="anniuTese" type="button">按特色展示</button>
+          </div>
+
+          <section class="diqu-zhanshi is-hidden" id="diquZhanshi" aria-label="中国地图地区展示">
+            <div class="diqu-zhanshi__qiehuan" aria-label="地区展示视图切换">
+              <button class="diqu-zhanshi__qiehuan-anniu is-active" id="anniuDituShitu" type="button">地图视图</button>
+              <button class="diqu-zhanshi__qiehuan-anniu" id="anniuAnquyu" type="button">按区域分类</button>
+            </div>
+
+            <div class="diqu-zhanshi__mianban" id="dituShituMianban">
+              <div class="diqu-zhanshi__tuqu">
+                <div class="diqu-zhanshi__ditu" id="dituDianwei">
+                  <div class="diqu-zhanshi__ditu-neiceng">
+                    <img class="diqu-zhanshi__ditu-tupian" src="./image/china-map-base.jpg" alt="中国地图地区分布底图" />
+                    <div class="diqu-zhanshi__dianceng" id="dituDianceng"></div>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="diqu-zhanshi__cebian">
+                <p class="diqu-zhanshi__meibiao">Region Focus</p>
+                <h3 id="shengfenMingcheng">北京</h3>
+                <p class="diqu-zhanshi__jianjie" id="shengfenJianjie">以都城礼制建筑为核心，适合从中轴、台基、重檐和整体秩序理解古建筑的空间气势。</p>
+                <div class="diqu-zhanshi__xinxi">
+                  <span id="shengfenLeixing">代表类型：宫殿 / 祭祀建筑</span>
+                  <span id="shengfenDaibiao">代表建筑：故宫太和殿、祈年殿</span>
+                </div>
+                <p class="diqu-zhanshi__tishi">点击地图上的红点，可以切换不同省级区域的古建筑看点。</p>
+                <a class="diqu-zhanshi__xiangqing" id="shengfenXiangqingLianjie" href="./area/beijing.html">进入北京详情</a>
+              </aside>
+            </div>
+
+            <section class="quyu-fenlei is-hidden" id="quyuFenleiMianban" aria-label="按区域分类展示">
+              <div class="quyu-fenlei__tou">
+                <p class="diqu-zhanshi__meibiao">Regional Groups</p>
+                <h3>把中国古建筑放回更大的地理板块里看。</h3>
+                <p>从华北礼制、江南园林，到西南山地聚落和西北丝路遗存，每个区域都适合用不同的阅读方式进入。</p>
+              </div>
+              <div class="quyu-fenlei__wangge" id="quyuFenleiWangge"></div>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

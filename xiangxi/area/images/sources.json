@@ -1,0 +1,308 @@
+﻿[
+    {
+        "slug":  "beijing",
+        "name":  "北京",
+        "file":  "./images/beijing.jpg",
+        "title":  "太和殿",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/4/4d/Hall_of_Supreme_Harmony%2C_Forbidden_City%2C_from_southeast.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%A4%AA%E5%92%8C%E6%AE%BF",
+        "ok":  true
+    },
+    {
+        "slug":  "tianjin",
+        "name":  "天津",
+        "file":  "./images/tianjin.jpg",
+        "title":  "天津广东会馆",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/6/68/%E5%B9%BF%E4%B8%9C%E4%BC%9A%E9%A6%86.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%A4%A9%E6%B4%A5%E5%B9%BF%E4%B8%9C%E4%BC%9A%E9%A6%86",
+        "ok":  true
+    },
+    {
+        "slug":  "hebei",
+        "name":  "河北",
+        "file":  "./images/hebei.jpg",
+        "title":  "承德避暑山庄",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Chengde_Mountain_Resort_22630-Chengde_%2842954495010%29.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E6%89%BF%E5%BE%B7%E9%81%BF%E6%9A%91%E5%B1%B1%E5%BA%84%E5%8F%8A%E5%85%B6%E5%91%A8%E5%9B%B4%E5%AF%BA%E5%BA%99",
+        "ok":  true
+    },
+    {
+        "slug":  "shanxi",
+        "name":  "山西",
+        "file":  "./images/shanxi.jpg",
+        "title":  "南禅寺大殿",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/c/c3/%E5%8D%97%E7%A6%85%E5%AF%BA%E5%A4%A7%E6%AE%BF%E6%AD%A3%E9%9D%A2%E4%BA%8C.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%8D%97%E7%A6%85%E5%AF%BA_(%E4%BA%94%E5%8F%B0)",
+        "ok":  true
+    },
+    {
+        "slug":  "neimenggu",
+        "name":  "内蒙古",
+        "file":  "./images/neimenggu.jpg",
+        "title":  "大召寺",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/d/d4/Dazhao_%28Wuliang%29_Temple_of_Hohhot2.JPG",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%8F%AC",
+        "ok":  true
+    },
+    {
+        "slug":  "liaoning",
+        "name":  "辽宁",
+        "file":  "./images/liaoning.jpg",
+        "title":  "沈阳故宫",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/6/69/%E6%B2%88%E9%98%B3%E6%95%85%E5%AE%AB%E4%B8%96%E7%95%8C%E6%96%87%E5%8C%96%E9%81%97%E4%BA%A7%E6%A0%87%E5%BF%97.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E6%B2%88%E9%98%B3%E6%95%85%E5%AE%AB",
+        "ok":  true
+    },
+    {
+        "slug":  "jilin",
+        "name":  "吉林",
+        "file":  "./images/jilin.jpg",
+        "title":  "吉林文庙",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/4/48/Jilin_Confucian_Temple.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%90%89%E6%9E%97%E6%96%87%E5%BA%99",
+        "ok":  true
+    },
+    {
+        "slug":  "heilongjiang",
+        "name":  "黑龙江",
+        "file":  "./images/heilongjiang.jpg",
+        "title":  "哈尔滨文庙",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/0/07/Dacheng_Hall_of_the_Harbin_Confucian_Temple.JPG",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%93%88%E5%B0%94%E6%BB%A8%E6%96%87%E5%BA%99",
+        "ok":  true
+    },
+    {
+        "slug":  "shanghai",
+        "name":  "上海",
+        "file":  "./images/shanghai.jpg",
+        "title":  "豫园",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/4/45/Shanghai_-_Yu_Garden_-_0035.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E8%B1%AB%E5%9B%AD",
+        "ok":  true
+    },
+    {
+        "slug":  "jiangsu",
+        "name":  "江苏",
+        "file":  "./images/jiangsu.jpg",
+        "title":  "拙政园",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/2/27/Humble_Administrator%27s_Garden_Suzhou_November_2017_008.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E6%8B%99%E6%94%BF%E5%9B%AD",
+        "ok":  true
+    },
+    {
+        "slug":  "zhejiang",
+        "name":  "浙江",
+        "file":  "./images/zhejiang.jpg",
+        "title":  "保国寺",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/f/f8/Ningbo_Baoguo_Temple%2C_2015-02-19_05.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E4%BF%9D%E5%9B%BD%E5%AF%BA",
+        "ok":  true
+    },
+    {
+        "slug":  "anhui",
+        "name":  "安徽",
+        "file":  "./images/anhui.jpg",
+        "title":  "宏村",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/5/50/Yixian_Hongcun_2016.09.09_18-17-55.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%AE%8F%E6%9D%91%E6%9D%91",
+        "ok":  true
+    },
+    {
+        "slug":  "fujian",
+        "name":  "福建",
+        "file":  "./images/fujian.jpg",
+        "title":  "南靖土楼",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/8/81/Tianluokeng_Tulou_cluster_20140829.JPG",
+        "page":  "https://zh.wikipedia.org/wiki/%E7%94%B0%E8%9E%BA%E5%9D%91%E5%9C%9F%E6%A5%BC%E7%BE%A4",
+        "ok":  true
+    },
+    {
+        "slug":  "jiangxi",
+        "name":  "江西",
+        "file":  "./images/jiangxi.jpg",
+        "title":  "白鹿洞书院",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/2/20/Lushan_White_Lotus_Grotto_Academy.JPG",
+        "page":  "https://zh.wikipedia.org/wiki/%E7%99%BD%E9%B9%BF%E6%B4%9E%E4%B9%A6%E9%99%A2",
+        "ok":  true
+    },
+    {
+        "slug":  "shandong",
+        "name":  "山东",
+        "file":  "./images/shandong.jpg",
+        "title":  "蓬莱阁",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/e/e2/PenglaiPavilion.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E8%93%AC%E8%8E%B1%E9%98%81",
+        "ok":  true
+    },
+    {
+        "slug":  "henan",
+        "name":  "河南",
+        "file":  "./images/henan.jpg",
+        "title":  "少林寺",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/0/09/Shaolinsi.JPG",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%B0%91%E6%9E%97%E5%AF%BA",
+        "ok":  true
+    },
+    {
+        "slug":  "hubei",
+        "name":  "湖北",
+        "file":  "./images/hubei.jpg",
+        "title":  "黄鹤楼",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/7/7f/CN_-_Hubei_-_Wuhan_-_Kranichpagode.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E9%BB%84%E9%B9%A4%E6%A5%BC",
+        "ok":  true
+    },
+    {
+        "slug":  "hunan",
+        "name":  "湖南",
+        "file":  "./images/hunan.jpg",
+        "title":  "岳阳楼",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/1/1b/Frontal_view_of_Yueyang_Tower%2C_Hunan%2C_China1.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%B2%B3%E9%98%B3%E6%A5%BC",
+        "ok":  true
+    },
+    {
+        "slug":  "guangdong",
+        "name":  "广东",
+        "file":  "./images/guangdong.jpg",
+        "title":  "陈家祠",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/f/f3/Chen_Clan_Ancestral_Hall_2025.06_02.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E9%99%88%E5%AE%B6%E7%A5%A0",
+        "ok":  true
+    },
+    {
+        "slug":  "guangxi",
+        "name":  "广西",
+        "file":  "./images/guangxi.jpg",
+        "title":  "程阳风雨桥",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/a/a2/Chengyangqiao%2C_Guangxi%2C_China.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E7%A8%8B%E9%98%B3%E6%B0%B8%E6%B5%8E%E6%A1%A5",
+        "ok":  true
+    },
+    {
+        "slug":  "hainan",
+        "name":  "海南",
+        "file":  "./images/hainan.jpg",
+        "title":  "五公祠",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/c/c7/P1110283_%2814188690007%29.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E4%BA%94%E5%85%AC%E7%A5%A0",
+        "ok":  true
+    },
+    {
+        "slug":  "chongqing",
+        "name":  "重庆",
+        "file":  "./images/chongqing.jpg",
+        "title":  "重庆湖广会馆",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/5/52/Chongqing_Huguang_Huiguan_2014.04.21_13-14-42.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E9%87%8D%E5%BA%86%E6%B9%96%E5%B9%BF%E4%BC%9A%E9%A6%86",
+        "ok":  true
+    },
+    {
+        "slug":  "sichuan",
+        "name":  "四川",
+        "file":  "./images/sichuan.jpg",
+        "title":  "阆中古城",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/0/0e/Langzhong_Ancient_Town.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E9%96%AC%E4%B8%AD%E5%8F%A4%E5%9F%8E",
+        "ok":  true
+    },
+    {
+        "slug":  "guizhou",
+        "name":  "贵州",
+        "file":  "./images/guizhou.jpg",
+        "title":  "青岩古镇",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/2/2a/Qingyan_Town.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E9%9D%92%E5%B2%A9%E9%95%87",
+        "ok":  true
+    },
+    {
+        "slug":  "yunnan",
+        "name":  "云南",
+        "file":  "./images/yunnan.jpg",
+        "title":  "丽江古城",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/e/e2/1_lijiang_old_town_2012a.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E4%B8%BD%E6%B1%9F%E5%8F%A4%E5%9F%8E",
+        "ok":  true
+    },
+    {
+        "slug":  "xizang",
+        "name":  "西藏",
+        "file":  "./images/xizang.jpg",
+        "title":  "布达拉宫",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/b/be/Potala_palace23.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%B8%83%E8%BE%BE%E6%8B%89%E5%AE%AB",
+        "ok":  true
+    },
+    {
+        "slug":  "shaanxi",
+        "name":  "陕西",
+        "file":  "./images/shaanxi.jpg",
+        "title":  "大雁塔",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/1/13/Giant_Wild_Goose_Pagoda.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%A4%A7%E9%9B%81%E5%A1%94",
+        "ok":  true
+    },
+    {
+        "slug":  "gansu",
+        "name":  "甘肃",
+        "file":  "./images/gansu.jpg",
+        "title":  "麦积山石窟",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/e/e8/Bodhisattva2_at_MaiJiShan.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E9%BA%A6%E7%A7%AF%E5%B1%B1%E7%9F%B3%E7%AA%9F",
+        "ok":  true
+    },
+    {
+        "slug":  "qinghai",
+        "name":  "青海",
+        "file":  "./images/qinghai.jpg",
+        "title":  "塔尔寺",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/4/4e/Taersi.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%A1%94%E5%B0%94%E5%AF%BA",
+        "ok":  true
+    },
+    {
+        "slug":  "ningxia",
+        "name":  "宁夏",
+        "file":  "./images/ningxia.jpg",
+        "title":  "承天寺塔",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/0/06/YinchuanWestPagoda.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E6%89%BF%E5%A4%A9%E5%AF%BA%E5%A1%94",
+        "ok":  true
+    },
+    {
+        "slug":  "xinjiang",
+        "name":  "新疆",
+        "file":  "./images/xinjiang.jpg",
+        "title":  "艾提尕尔清真寺",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/7/7d/H%C3%ABytgah_Mosque%2C_Kashi_%2820230923100109%29.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E8%89%BE%E6%8F%90%E5%B0%95%E5%B0%94%E6%B8%85%E7%9C%9F%E5%AF%BA",
+        "ok":  true
+    },
+    {
+        "slug":  "taiwan",
+        "name":  "台湾",
+        "file":  "./images/taiwan.jpg",
+        "title":  "龙山寺",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/8/80/Anhai_Longshan_Si_20120228-3.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E9%BE%8D%E5%B1%B1%E5%AF%BA",
+        "ok":  true
+    },
+    {
+        "slug":  "xianggang",
+        "name":  "香港",
+        "file":  "./images/xianggang.jpg",
+        "title":  "屏山文物径",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/2/22/PingShanTrail02.jpg",
+        "page":  "https://zh.wikipedia.org/wiki/%E5%B1%8F%E5%B1%B1%E6%96%87%E7%89%A9%E5%BE%91",
+        "ok":  true
+    },
+    {
+        "slug":  "aomen",
+        "name":  "澳门",
+        "file":  "./images/aomen.jpg",
+        "title":  "A-Ma Temple",
+        "source":  "https://upload.wikimedia.org/wikipedia/commons/3/39/A_Ma_Temple_200907.jpg",
+        "page":  "https://en.wikipedia.org/wiki/A-Ma_Temple",
+        "ok":  true
+    }
+]
