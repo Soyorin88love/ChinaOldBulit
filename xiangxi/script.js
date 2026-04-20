@@ -61,42 +61,88 @@ const lunboShuju = [
   }
 ];
 
+// 省份“信息数据”（用于右侧信息面板/按区域分类等）
+// 注意：地图红点坐标已从这里拆出，避免“换底图就整体偏移”时需要逐个改动。
 const shengfenShuju = [
-  { name: "北京", slug: "beijing", region: "华北", x: 68.7, y: 30.6, dx: 10, dy: -16, type: "宫殿 / 祭祀建筑", spot: "故宫太和殿、天坛祈年殿", summary: "以都城礼制建筑为核心，适合从中轴、台基、重檐和整体秩序理解古建筑空间。" },
-  { name: "天津", slug: "tianjin", region: "华北", x: 70.9, y: 31.5, dx: 10, dy: 8, type: "城厢建筑 / 会馆", spot: "广东会馆、天后宫", summary: "传统城厢与近代街区并置，适合观察城市叠层。" },
-  { name: "河北", slug: "hebei", region: "华北", x: 66.5, y: 33.4, dx: -52, dy: -12, type: "寺观 / 皇家外围体系", spot: "承德避暑山庄、正定古建", summary: "连接都城与地方，是北方建筑体系的重要过渡地带。" },
-  { name: "山西", slug: "shanxi", region: "华北", x: 59.2, y: 35.2, dx: -40, dy: -14, type: "寺观 / 木构", spot: "佛光寺、南禅寺、应县木塔", summary: "早期木构遗存最集中，适合从梁架和斗拱切入。" },
-  { name: "内蒙古", slug: "neimenggu", region: "华北", x: 56.2, y: 24.2, dx: -50, dy: -18, type: "寺庙 / 王府", spot: "大召寺、五塔寺", summary: "草原边地与城镇体系并存，地理跨度大。" },
-  { name: "辽宁", slug: "liaoning", region: "东北", x: 78.9, y: 25.8, dx: 10, dy: -14, type: "宫殿 / 城市建筑", spot: "沈阳故宫", summary: "皇家遗存与寒地城市共存，层次鲜明。" },
-  { name: "吉林", slug: "jilin", region: "东北", x: 83.7, y: 21.8, dx: 10, dy: -12, type: "寺庙 / 聚落", spot: "北山古庙群", summary: "寒地环境影响围护与尺度，适合做南北对照。" },
-  { name: "黑龙江", slug: "heilongjiang", region: "东北", x: 86.6, y: 15.1, dx: -8, dy: -16, type: "宗教建筑 / 城市遗存", spot: "文庙、极乐寺", summary: "边境城市与寒地建筑关系紧密。" },
-  { name: "上海", slug: "shanghai", region: "华东", x: 77.2, y: 54.6, dx: 10, dy: -14, type: "园林 / 城市宅院", spot: "豫园", summary: "传统园林与现代城市纹理叠置。" },
-  { name: "江苏", slug: "jiangsu", region: "华东", x: 74.3, y: 50.3, dx: -42, dy: -16, type: "园林 / 民居 / 古镇", spot: "拙政园、网师园", summary: "园林与水巷系统完整，路径节奏突出。" },
-  { name: "浙江", slug: "zhejiang", region: "华东", x: 76.3, y: 57.9, dx: 10, dy: -14, type: "园林 / 古村 / 书院", spot: "保国寺、乌镇古建", summary: "山水、书院和古村并存，空间转折丰富。" },
-  { name: "安徽", slug: "anhui", region: "华东", x: 69.7, y: 52.1, dx: -36, dy: 8, type: "民居 / 祠堂 / 村落", spot: "宏村、西递", summary: "徽派建筑典型，适合读马头墙和村落秩序。" },
-  { name: "福建", slug: "fujian", region: "华东", x: 72.4, y: 64.7, dx: 10, dy: -14, type: "土楼 / 宗族民居", spot: "永定土楼、南靖土楼", summary: "围合聚居特征鲜明，防御性与生活性并重。" },
-  { name: "江西", slug: "jiangxi", region: "华东", x: 67.3, y: 58.9, dx: -30, dy: -16, type: "书院 / 祠堂", spot: "白鹿洞书院", summary: "书院与乡土祠堂体系完整。" },
-  { name: "山东", slug: "shandong", region: "华东", x: 74.4, y: 39.4, dx: 10, dy: -14, type: "楼阁 / 庙宇", spot: "蓬莱阁、孔庙", summary: "山海之间的高台楼阁与礼制建筑共存。" },
-  { name: "河南", slug: "henan", region: "华中", x: 63.8, y: 43.2, dx: -34, dy: -16, type: "寺塔 / 古都建筑", spot: "少林寺", summary: "中原古都遗存与寺塔体系丰富。" },
-  { name: "湖北", slug: "hubei", region: "华中", x: 60.2, y: 53.1, dx: -34, dy: -16, type: "楼阁 / 寺观", spot: "黄鹤楼", summary: "长江中游楼阁视线关系典型。" },
-  { name: "湖南", slug: "hunan", region: "华中", x: 57.2, y: 60.1, dx: -34, dy: -16, type: "楼阁 / 山水建筑", spot: "岳阳楼", summary: "山水与楼阁的叠合关系鲜明。" },
-  { name: "广东", slug: "guangdong", region: "华南", x: 61.2, y: 73.8, dx: 10, dy: -14, type: "宗祠 / 骑楼", spot: "陈家祠", summary: "宗祠体系与骑楼街区并存。" },
-  { name: "广西", slug: "guangxi", region: "华南", x: 53.1, y: 70.9, dx: -38, dy: -16, type: "鼓楼 / 风雨桥", spot: "程阳风雨桥", summary: "山地聚落与民族建筑特征明显。" },
-  { name: "海南", slug: "hainan", region: "华南", x: 58.5, y: 84.2, dx: 10, dy: -14, type: "民居 / 宗教建筑", spot: "骑楼老街", summary: "热带气候下通风遮阴策略突出。" },
-  { name: "重庆", slug: "chongqing", region: "西南", x: 51.4, y: 56.4, dx: -26, dy: 10, type: "山城聚落", spot: "湖广会馆", summary: "高差与坡地决定空间组织。" },
-  { name: "四川", slug: "sichuan", region: "西南", x: 43.2, y: 53.4, dx: -34, dy: -16, type: "寺观 / 山地聚落", spot: "青城山建筑群", summary: "盆地城市与山地寺观并置。" },
-  { name: "贵州", slug: "guizhou", region: "西南", x: 46.8, y: 63.1, dx: -26, dy: 10, type: "鼓楼 / 吊脚楼", spot: "西江苗寨", summary: "湿润山地中的木构聚落组织突出。" },
-  { name: "云南", slug: "yunnan", region: "西南", x: 35.2, y: 71.3, dx: -28, dy: -16, type: "民居 / 寺庙 / 古城", spot: "丽江古城", summary: "多民族与多地貌共同塑造空间形态。" },
-  { name: "西藏", slug: "xizang", region: "西南", x: 19.3, y: 57.1, dx: -26, dy: -16, type: "宫殿 / 寺庙", spot: "布达拉宫", summary: "高原地形与宗教空间高度一体。" },
-  { name: "陕西", slug: "shaanxi", region: "西北", x: 49.4, y: 43.5, dx: -34, dy: -16, type: "古都 / 塔寺", spot: "大雁塔", summary: "古都尺度与塔寺体系完整。" },
-  { name: "甘肃", slug: "gansu", region: "西北", x: 36.1, y: 36.5, dx: -32, dy: -16, type: "石窟 / 佛寺", spot: "麦积山石窟", summary: "丝路沿线建筑更适合放在交通文化网络中理解。" },
-  { name: "青海", slug: "qinghai", region: "西北", x: 28.4, y: 43.8, dx: -26, dy: -16, type: "寺院 / 聚落", spot: "塔尔寺", summary: "高原边界上的寺院聚落特征鲜明。" },
-  { name: "宁夏", slug: "ningxia", region: "西北", x: 44.1, y: 37.6, dx: 10, dy: -14, type: "寺塔 / 城市遗存", spot: "承天寺塔", summary: "黄河沿线的塔寺与城市遗存并置。" },
-  { name: "新疆", slug: "xinjiang", region: "西北", x: 16.4, y: 27.3, dx: -26, dy: -16, type: "清真寺 / 城市街区", spot: "艾提尕尔清真寺", summary: "绿洲城市与边疆街区共同构成独特空间。" },
-  { name: "台湾", slug: "taiwan", region: "港澳台", x: 82.8, y: 74.5, dx: 10, dy: -14, type: "庙宇 / 聚落", spot: "龙山寺", summary: "庙宇系统与山海聚落共存。" },
-  { name: "香港", slug: "xianggang", region: "港澳台", x: 63.6, y: 76.2, dx: 10, dy: 8, type: "庙宇 / 祠堂", spot: "文武庙", summary: "高密城市中的传统庙宇与旧村遗存。" },
-  { name: "澳门", slug: "aomen", region: "港澳台", x: 61.7, y: 77.1, dx: -28, dy: 8, type: "庙宇 / 城市街区", spot: "妈阁庙", summary: "跨文化街区中的庙宇与大屋并置。" }
+  { name: "北京", slug: "beijing", region: "华北", dx: 10, dy: -16, type: "宫殿 / 祭祀建筑", spot: "故宫太和殿、天坛祈年殿", summary: "以都城礼制建筑为核心，适合从中轴、台基、重檐和整体秩序理解古建筑空间。" },
+  { name: "天津", slug: "tianjin", region: "华北", dx: 10, dy: 8, type: "城厢建筑 / 会馆", spot: "广东会馆、天后宫", summary: "传统城厢与近代街区并置，适合观察城市叠层。" },
+  { name: "河北", slug: "hebei", region: "华北", dx: -52, dy: -12, type: "寺观 / 皇家外围体系", spot: "承德避暑山庄、正定古建", summary: "连接都城与地方，是北方建筑体系的重要过渡地带。" },
+  { name: "山西", slug: "shanxi", region: "华北", dx: -40, dy: -14, type: "寺观 / 木构", spot: "佛光寺、南禅寺、应县木塔", summary: "早期木构遗存最集中，适合从梁架和斗拱切入。" },
+  { name: "内蒙古", slug: "neimenggu", region: "华北", dx: -50, dy: -18, type: "寺庙 / 王府", spot: "大召寺、五塔寺", summary: "草原边地与城镇体系并存，地理跨度大。" },
+  { name: "辽宁", slug: "liaoning", region: "东北", dx: 10, dy: -14, type: "宫殿 / 城市建筑", spot: "沈阳故宫", summary: "皇家遗存与寒地城市共存，层次鲜明。" },
+  { name: "吉林", slug: "jilin", region: "东北", dx: 10, dy: -12, type: "寺庙 / 聚落", spot: "北山古庙群", summary: "寒地环境影响围护与尺度，适合做南北对照。" },
+  { name: "黑龙江", slug: "heilongjiang", region: "东北", dx: -8, dy: -16, type: "宗教建筑 / 城市遗存", spot: "文庙、极乐寺", summary: "边境城市与寒地建筑关系紧密。" },
+  { name: "上海", slug: "shanghai", region: "华东", dx: 10, dy: -14, type: "园林 / 城市宅院", spot: "豫园", summary: "传统园林与现代城市纹理叠置。" },
+  { name: "江苏", slug: "jiangsu", region: "华东", dx: -42, dy: -16, type: "园林 / 民居 / 古镇", spot: "拙政园、网师园", summary: "园林与水巷系统完整，路径节奏突出。" },
+  { name: "浙江", slug: "zhejiang", region: "华东", dx: 10, dy: -14, type: "园林 / 古村 / 书院", spot: "保国寺、乌镇古建", summary: "山水、书院和古村并存，空间转折丰富。" },
+  { name: "安徽", slug: "anhui", region: "华东", dx: -36, dy: 8, type: "民居 / 祠堂 / 村落", spot: "宏村、西递", summary: "徽派建筑典型，适合读马头墙和村落秩序。" },
+  { name: "福建", slug: "fujian", region: "华东", dx: 10, dy: -14, type: "土楼 / 宗族民居", spot: "永定土楼、南靖土楼", summary: "围合聚居特征鲜明，防御性与生活性并重。" },
+  { name: "江西", slug: "jiangxi", region: "华东", dx: -30, dy: -16, type: "书院 / 祠堂", spot: "白鹿洞书院", summary: "书院与乡土祠堂体系完整。" },
+  { name: "山东", slug: "shandong", region: "华东", dx: 10, dy: -14, type: "楼阁 / 庙宇", spot: "蓬莱阁、孔庙", summary: "山海之间的高台楼阁与礼制建筑共存。" },
+  { name: "河南", slug: "henan", region: "华中", dx: -34, dy: -16, type: "寺塔 / 古都建筑", spot: "少林寺", summary: "中原古都遗存与寺塔体系丰富。" },
+  { name: "湖北", slug: "hubei", region: "华中", dx: -34, dy: -16, type: "楼阁 / 寺观", spot: "黄鹤楼", summary: "长江中游楼阁视线关系典型。" },
+  { name: "湖南", slug: "hunan", region: "华中", dx: -34, dy: -16, type: "楼阁 / 山水建筑", spot: "岳阳楼", summary: "山水与楼阁的叠合关系鲜明。" },
+  { name: "广东", slug: "guangdong", region: "华南", dx: 10, dy: -14, type: "宗祠 / 骑楼", spot: "陈家祠", summary: "宗祠体系与骑楼街区并存。" },
+  { name: "广西", slug: "guangxi", region: "华南", dx: -38, dy: -16, type: "鼓楼 / 风雨桥", spot: "程阳风雨桥", summary: "山地聚落与民族建筑特征明显。" },
+  { name: "海南", slug: "hainan", region: "华南", dx: 10, dy: -14, type: "民居 / 宗教建筑", spot: "骑楼老街", summary: "热带气候下通风遮阴策略突出。" },
+  { name: "重庆", slug: "chongqing", region: "西南", dx: -26, dy: 10, type: "山城聚落", spot: "湖广会馆", summary: "高差与坡地决定空间组织。" },
+  { name: "四川", slug: "sichuan", region: "西南", dx: -34, dy: -16, type: "寺观 / 山地聚落", spot: "青城山建筑群", summary: "盆地城市与山地寺观并置。" },
+  { name: "贵州", slug: "guizhou", region: "西南", dx: -26, dy: 10, type: "鼓楼 / 吊脚楼", spot: "西江苗寨", summary: "湿润山地中的木构聚落组织突出。" },
+  { name: "云南", slug: "yunnan", region: "西南", dx: -28, dy: -16, type: "民居 / 寺庙 / 古城", spot: "丽江古城", summary: "多民族与多地貌共同塑造空间形态。" },
+  { name: "西藏", slug: "xizang", region: "西南", dx: -26, dy: -16, type: "宫殿 / 寺庙", spot: "布达拉宫", summary: "高原地形与宗教空间高度一体。" },
+  { name: "陕西", slug: "shaanxi", region: "西北", dx: -34, dy: -16, type: "古都 / 塔寺", spot: "大雁塔", summary: "古都尺度与塔寺体系完整。" },
+  { name: "甘肃", slug: "gansu", region: "西北", dx: -32, dy: -16, type: "石窟 / 佛寺", spot: "麦积山石窟", summary: "丝路沿线建筑更适合放在交通文化网络中理解。" },
+  { name: "青海", slug: "qinghai", region: "西北", dx: -26, dy: -16, type: "寺院 / 聚落", spot: "塔尔寺", summary: "高原边界上的寺院聚落特征鲜明。" },
+  { name: "宁夏", slug: "ningxia", region: "西北", dx: 10, dy: -14, type: "寺塔 / 城市遗存", spot: "承天寺塔", summary: "黄河沿线的塔寺与城市遗存并置。" },
+  { name: "新疆", slug: "xinjiang", region: "西北", dx: -26, dy: -16, type: "清真寺 / 城市街区", spot: "艾提尕尔清真寺", summary: "绿洲城市与边疆街区共同构成独特空间。" },
+  { name: "台湾", slug: "taiwan", region: "港澳台", dx: -44, dy: -14, type: "庙宇 / 聚落", spot: "龙山寺", summary: "庙宇系统与山海聚落共存。" },
+  { name: "香港", slug: "xianggang", region: "港澳台", dx: 10, dy: 8, type: "庙宇 / 祠堂", spot: "文武庙", summary: "高密城市中的传统庙宇与旧村遗存。" },
+  { name: "澳门", slug: "aomen", region: "港澳台", dx: -28, dy: 8, type: "庙宇 / 城市街区", spot: "妈阁庙", summary: "跨文化街区中的庙宇与大屋并置。" }
 ];
+
+// 省份“红点坐标数据”（用于地图红点渲染）
+// 你要求“先去掉所有红点，再根据地图加入”，所以这里先置空。
+// 进入 `xiangxi/index.html?editDots=1` 后，点击地图即可取点生成条目（会复制到剪贴板并输出到控制台）。
+const shengfenDianweiShuju = [
+  { name: "黑龙江", x: 88, y: 17.3 },
+  { name: "吉林", x: 87, y: 27 },
+  { name: "辽宁", x: 83.5, y: 33.6 },
+  { name: "北京", x: 73.2, y: 38.7 },
+  { name: "天津", x: 74.4, y: 40.6 },
+  { name: "河北", x: 70.8, y: 44.7 },
+  { name: "山东", x: 76.4, y: 47.3 },
+  { name: "内蒙古", x: 63.9, y: 35.6 },
+  { name: "山西", x: 65.8, y: 45.7 },
+  { name: "河南", x: 69.3, y: 53.7 },
+  { name: "安徽", x: 76.7, y: 58.1 },
+  { name: "浙江", x: 82.5, y: 64 },
+  { name: "江苏", x: 80.5, y: 53.7 },
+  { name: "宁夏", x: 55.4, y: 46 },
+  { name: "陕西", x: 59.6, y: 55.1 },
+  { name: "甘肃", x: 51.1, y: 48.1 },
+  { name: "青海", x: 35.5, y: 49.3 },
+  { name: "新疆", x: 20.1, y: 33.1 },
+  { name: "西藏", x: 19.3, y: 57.9 },
+  { name: "四川", x: 48.6, y: 63.1 },
+  { name: "重庆", x: 59.3, y: 65.2 },
+  { name: "云南", x: 45.9, y: 79.6 },
+  { name: "贵州", x: 57.5, y: 72.8 },
+  { name: "广西", x: 61.9, y: 82.7 },
+  { name: "广东", x: 70.7, y: 80.5 },
+  { name: "湖北", x: 66.8, y: 61.5 },
+  { name: "湖南", x: 67, y: 70.3 },
+  { name: "江西", x: 74.7, y: 68.7 },
+  { name: "福建", x: 79.9, y: 73 },
+  { name: "台湾", x: 86.9, y: 77.2 }
+];
+
+function qudeShengfenXinxi(name) {
+  return shengfenShuju.find((item) => item.name === name) || null;
+}
+
+function qudeShengfenXinxiBySlug(slug) {
+  return shengfenShuju.find((item) => item.slug === slug) || null;
+}
 
 const quyuFenleiShuju = [
   { title: "华北", intro: "礼制和都城体系最完整。", focus: "中轴、台基、斗拱", spots: "故宫太和殿、佛光寺、承德避暑山庄" },
@@ -259,6 +305,8 @@ const shengfenJianjie = document.querySelector("#shengfenJianjie");
 const shengfenLeixing = document.querySelector("#shengfenLeixing");
 const shengfenDaibiao = document.querySelector("#shengfenDaibiao");
 const shengfenXiangqingLianjie = document.querySelector("#shengfenXiangqingLianjie");
+const sketchfabBiaoti = document.querySelector("#sketchfabBiaoti");
+const sketchfabWangge = document.querySelector("#sketchfabWangge");
 
 const zhuangtai = {
   dangqian: 0,
@@ -267,10 +315,88 @@ const zhuangtai = {
 };
 
 let lunboDingshiqi;
+let sketchfabShuju = null;
+let sketchfabYijiazai = false;
 
 function qudeShengfenXiangqingLujing(name) {
-  const shengfen = shengfenShuju.find((item) => item.name === name);
+  const shengfen = qudeShengfenXinxi(name);
   return shengfen ? `./area/${shengfen.slug}.html` : "./area/index.html";
+}
+
+function zhuanyiHtml(text) {
+  return String(text ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll("\"", "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+async function duquSketchfabShuju() {
+  if (sketchfabShuju) return sketchfabShuju;
+  const res = await fetch("./area/sketchfab-models.json", { cache: "no-store" });
+  if (!res.ok) {
+    throw new Error(`Sketchfab data load failed: ${res.status}`);
+  }
+  sketchfabShuju = await res.json();
+  return sketchfabShuju;
+}
+
+function shengchengSketchfabKa(moxing) {
+  return `
+    <article class="diqu-3d__ka">
+      <div class="diqu-3d__shipin">
+        <iframe
+          title="${zhuanyiHtml(moxing.title)}"
+          src="${moxing.embedUrl}?autospin=0.2&autostart=0&ui_theme=dark"
+          loading="lazy"
+          frameborder="0"
+          allow="autoplay; fullscreen; xr-spatial-tracking"
+          allowfullscreen
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+        ></iframe>
+      </div>
+      <div class="diqu-3d__xinxi">
+        <h4>${zhuanyiHtml(moxing.title)}</h4>
+        <p>作者：${zhuanyiHtml(moxing.author || "Sketchfab")}</p>
+        <a href="${moxing.viewerUrl}" target="_blank" rel="noopener noreferrer">在 Sketchfab 查看</a>
+      </div>
+    </article>
+  `;
+}
+
+function gengxinSketchfabFenqu() {
+  if (!sketchfabBiaoti || !sketchfabWangge) return;
+  const shengfen = qudeShengfenXinxi(zhuangtai.dangqianShengfen) || shengfenShuju[0];
+  sketchfabBiaoti.textContent = `${shengfen.name} 3D 建模`;
+
+  if (!sketchfabYijiazai) {
+    sketchfabWangge.innerHTML = `<p class="diqu-3d__zhuangtai">正在加载 3D 模型...</p>`;
+    return;
+  }
+
+  const moxing = sketchfabShuju?.[shengfen.slug]?.models || [];
+  if (!moxing.length) {
+    sketchfabWangge.innerHTML = `<p class="diqu-3d__zhuangtai">暂无 ${shengfen.name} 的 3D 模型数据。</p>`;
+    return;
+  }
+
+  sketchfabWangge.innerHTML = moxing.slice(0, 3).map(shengchengSketchfabKa).join("");
+}
+
+async function qidongSketchfabFenqu() {
+  if (!sketchfabBiaoti || !sketchfabWangge) return;
+  gengxinSketchfabFenqu();
+  try {
+    await duquSketchfabShuju();
+    sketchfabYijiazai = true;
+  } catch (error) {
+    sketchfabYijiazai = true;
+    sketchfabShuju = {};
+    console.error("Sketchfab section render failed:", error);
+  }
+  gengxinSketchfabFenqu();
 }
 
 function shengchengHuandeng() {
@@ -321,18 +447,22 @@ function qidongLunbo() {
 }
 
 function shengchengDianwei() {
-  dituDianceng.innerHTML = shengfenShuju
-    .map((item) => `
+  dituDianceng.innerHTML = shengfenDianweiShuju
+    .map((dianwei) => {
+      const xinxi = qudeShengfenXinxi(dianwei.name);
+      if (!xinxi) return "";
+      return `
       <button
-        class="shengfen-dian ${item.name === zhuangtai.dangqianShengfen ? "is-active" : ""}"
+        class="shengfen-dian ${dianwei.name === zhuangtai.dangqianShengfen ? "is-active" : ""}"
         type="button"
-        data-shengfen="${item.name}"
-        aria-label="查看 ${item.name} 古建筑信息"
-        style="left:${item.x}%; top:${item.y}%"
+        data-shengfen="${xinxi.name}"
+        aria-label="查看 ${xinxi.name} 古建筑信息"
+        style="left:${dianwei.x}%; top:${dianwei.y}%"
       >
-        <span class="shengfen-dian__biaoqian" style="--biaoqian-x:${item.dx}px; --biaoqian-y:${item.dy}px">${item.name}</span>
+        <span class="shengfen-dian__biaoqian" style="--biaoqian-x:${xinxi.dx}px; --biaoqian-y:${xinxi.dy}px">${xinxi.name}</span>
       </button>
-    `)
+    `;
+    })
     .join("");
 }
 
@@ -408,7 +538,7 @@ function shengchengTeseFenlei() {
 }
 
 function gengxinShengfenXinxi() {
-  const shengfen = shengfenShuju.find((item) => item.name === zhuangtai.dangqianShengfen) || shengfenShuju[0];
+  const shengfen = qudeShengfenXinxi(zhuangtai.dangqianShengfen) || shengfenShuju[0];
   shengfenMingcheng.textContent = shengfen.name;
   shengfenJianjie.textContent = shengfen.summary;
   shengfenLeixing.textContent = `代表类型：${shengfen.type}`;
@@ -418,6 +548,61 @@ function gengxinShengfenXinxi() {
 
   dituDianceng.querySelectorAll(".shengfen-dian").forEach((item) => {
     item.classList.toggle("is-active", item.dataset.shengfen === shengfen.name);
+  });
+  gengxinSketchfabFenqu();
+}
+
+function isDotEditorEnabled() {
+  try {
+    return new URLSearchParams(window.location.search).has("editDots");
+  } catch {
+    return false;
+  }
+}
+
+function baocunDianweiTiaomu(dianwei) {
+  const payload = { name: dianwei.name, x: dianwei.x, y: dianwei.y };
+  const text = JSON.stringify(payload);
+  console.log("shengfenDianweiShuju item:", payload);
+  if (navigator?.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).catch(() => {});
+  }
+}
+
+function bangdingDituQuDian() {
+  if (!isDotEditorEnabled()) return;
+  const neiceng = document.querySelector(".diqu-zhanshi__ditu-neiceng");
+  if (!neiceng) return;
+
+  neiceng.addEventListener("click", (event) => {
+    const rect = neiceng.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+    const name = window.prompt("输入省份名称（例如：北京）");
+    if (!name) return;
+    const xinxi = qudeShengfenXinxi(name);
+    if (!xinxi) {
+      window.alert("未找到该省份名称，请按现有名称输入（例如：北京、江苏、香港）");
+      return;
+    }
+
+    const dianwei = {
+      name: xinxi.name,
+      x: Number(x.toFixed(1)),
+      y: Number(y.toFixed(1))
+    };
+
+    // 去重：同名省份只保留最后一次取点
+    const idx = shengfenDianweiShuju.findIndex((item) => item.name === dianwei.name);
+    if (idx >= 0) {
+      shengfenDianweiShuju.splice(idx, 1, dianwei);
+    } else {
+      shengfenDianweiShuju.push(dianwei);
+    }
+
+    shengchengDianwei();
+    baocunDianweiTiaomu(dianwei);
   });
 }
 
@@ -502,4 +687,6 @@ shengchengGouzaoFenlei();
 shengchengTeseFenlei();
 gengxinShengfenXinxi();
 bangdingShijian();
+bangdingDituQuDian();
+qidongSketchfabFenqu();
 qidongLunbo();
