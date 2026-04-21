@@ -61,8 +61,6 @@ const lunboShuju = [
   }
 ];
 
-// 省份“信息数据”（用于右侧信息面板/按区域分类等）
-// 注意：地图红点坐标已从这里拆出，避免“换底图就整体偏移”时需要逐个改动。
 const shengfenShuju = [
   { name: "北京", slug: "beijing", region: "华北", dx: 10, dy: -16, type: "宫殿 / 祭祀建筑", spot: "故宫太和殿、天坛祈年殿", summary: "以都城礼制建筑为核心，适合从中轴、台基、重檐和整体秩序理解古建筑空间。" },
   { name: "天津", slug: "tianjin", region: "华北", dx: 10, dy: 8, type: "城厢建筑 / 会馆", spot: "广东会馆、天后宫", summary: "传统城厢与近代街区并置，适合观察城市叠层。" },
